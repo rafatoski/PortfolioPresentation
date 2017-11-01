@@ -1,0 +1,403 @@
+/*
+Name: Creative Web Portfolio 
+Version:3.0
+Author:Rafael Castillo
+Author URL: http://rafaelcastilllo.com;
+*/
+
+/* =Table of Contents
+--------------------------------------------------------------
+	=Common Styles
+	=Hero
+    =Featured
+    =Portfolio
+    =Media Queries
+   
+*/
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700);
+/* --->>> COMMON STYLES <<<---
+-------------------------------------------------------------- */
+*{
+	outline: none!important;
+}
+
+#preloader  {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background-color: #222;
+     z-index: 99;
+    height: 100%;
+ }
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #222;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto', sans-serif;
+}
+a,.a{
+	margin: auto;
+	-webkit-transition:all .3s easeIn;
+	-moz-transition:all .3s easeIn;
+	-ms-transition:all .3s easeIn;
+	-o-transition:all .3s easeIn;
+	transition:all .3s easeIn;
+}
+.color-main {
+    color: #fb383b;
+}
+.logo {
+	display: inline-block;
+	margin-right: 16px;	
+}
+.btn-general {
+	background: #fb383b;
+	border-radius: 0;
+	border: none;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	line-height: 24px;
+	margin-bottom: 20px;
+	padding: 12px 30px;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	top: 0;
+	transition:all .3s ease;
+	vertical-align: middle;
+	word-wrap: break-word;
+}
+.btn-general:hover {
+    background: #ffffff;
+    color: #fb383b;
+	text-decoration: none;
+    top: -3px;
+    outline:none;
+}
+.btn-general:focus, .btn-general:active{
+	color: #fff;
+	background: #fb383b;
+	text-decoration: none;
+}
+
+/* --->>> HERO <<<---
+-------------------------------------------------------------- */
+section.main-banner{
+	background: transparent;
+	padding-top:27%;
+	color: #fff;
+	text-align: center;
+}
+section.main-banner h1{
+	display: block;
+	font-size:3em;
+	text-transform: uppercase;
+	line-height: 1.125;
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+	margin: 0 auto;
+}
+section.main-banner h2{
+	font-size: 1.5em;
+	font-family: 'Lato', sans-serif;
+}
+section.main-banner h2.top{
+	margin-bottom: 0;
+}
+section.main-banner h2.bottom{
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+#hero .amp {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+}
+#hero h2{
+	font-family: 'Playfair Display', serif;
+}
+#hero .name{
+	font-family: 'Roboto', sans-serif;
+}
+section.main-banner .avatar{
+	display: inline-block;
+	max-width: 100px;
+	box-shadow: 0 2px 7px rgba(0,0,0,.05);
+}
+
+/* --->>> FEATURED <<<---
+-------------------------------------------------------------- */
+section.featured {
+	background:transparent;
+	color: #fefefe;
+	font-size: 17px;
+	letter-spacing: 0.04em;
+	line-height: 25px;
+	min-height: 400px;
+	padding-bottom: 120px;
+	padding-top: 120px;
+}
+section.featured h6{
+	font-family: Lato;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing: 0.08em;
+	line-height: 24px;
+	margin-bottom: 10px;
+	text-align: left;
+}
+section.featured .desc{
+	color: #fefefe;
+	font-size: 17px;
+	letter-spacing: 0.04em;
+	line-height: 25px;
+	margin-bottom: 20px;
+}
+section.featured .name-project{
+	color: #ffffff;
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 700;
+	letter-spacing: 0.64px;
+	line-height: 46px;
+	margin-bottom: 15px;
+	text-align: left;
+}
+
+/* --->>> PORTFOLIO <<<---
+-------------------------------------------------------------- */
+section.portfolio{
+	background:transparent;
+	color: #fefefe;
+	font-size: 17px;
+	letter-spacing: 0.04em;
+	line-height: 25px;
+	min-height: 400px;
+	padding-bottom: 120px;
+	padding-top: 120px;
+}
+.heading {
+	display: block;
+	width: 100%;
+	margin-bottom: 40px;
+}
+.heading h3.title{
+    color: #ffffff;
+    font-size: 25px;
+    line-height: 38px;
+    font-weight: 700; 
+    margin-bottom: 10px;
+    text-align: center;
+}
+.subtitle{
+	font-size: 16px;
+	color: #929292;
+	line-height: 24px;
+	text-align: center;
+    letter-spacing: 0.04em;
+    position: relative;
+    padding-bottom: 15px;
+}
+ .subtitle:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 40px;
+    height: 4px;
+    background: #fb383b;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.heading-portfolio{
+	margin-bottom: 35px;
+}
+
+/* --->>> PROJECTS <<<---
+-------------------------------------------------------------- */
+.card .card-desc {
+	font-size: 14px;
+    color: #929292;
+    line-height: 4px;
+    text-align: left;
+    letter-spacing: 0.04em;
+    position: relative;
+    padding-bottom: 15px;
+}
+.card .project-name {
+	font-size: 16px;
+    font-weight: 700;
+}
+.more{
+	text-align: center;
+	display: block;
+	margin-top: 40px;
+}
+/* --->>> ABOUT ME <<<---
+-------------------------------------------------------------- */
+section.about-me{
+	background:transparent;
+	color: #fefefe;
+	font-size: 17px;
+	letter-spacing: 0.04em;
+	line-height: 25px;
+	min-height: 400px;
+	padding-bottom: 0;
+	padding-top: 120px;
+}
+.about-me .slogan{
+	font-family: 'Lato';
+	font-size: 20px;
+	font-style: italic;
+	font-weight: 400;
+	letter-spacing: 0.08em;
+	line-height: 24px;
+	margin-bottom: 10px;
+	text-align: left;
+}
+.about-me .name{
+	color: #ffffff;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.64px;
+    line-height: 46px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.about-me .desc{
+	line-height: 1.8em;
+	margin-bottom: 40px;
+}
+.about-me .social {
+	display: block;
+}
+
+.about-me .social a{
+	color: #fb383b;
+}
+/* --->>> Float Widget Popup<<<--- */
+.float {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	bottom: 20px;
+	right: 30px;
+	background-color: #F44336;
+	color: #FFF;
+	font-size: 18px;
+	border-radius: 50px;
+	text-align: center;
+	box-shadow: 2px 2px 3px rgba(45, 45, 45, 0.4);
+	transition: all .3s ease;
+	z-index: 9999;
+}
+.float:hover, .float:focus{
+	background: #fb383b;
+	color: #FFF;
+}
+.my-float {
+    margin-top: 15px;
+}
+
+.modal-content{
+	border-radius: 0;
+}
+.modal-header{
+	background: #F44336;
+    color: #fff;
+    padding: 20px 35px;
+    text-align: left;
+}
+.modal-header .close {
+	text-shadow: none;
+}
+
+
+.form-control {
+	border-radius:0;
+	border: transparent;
+	border-bottom: 2px solid #bdc3c7;
+	color: #34495e;
+	font-family: "Lato", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	line-height: 1.467;
+	padding: 9px 12px;
+	-webkit-appearance: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	-webkit-transition: border .25s linear, color .25s linear, background-color .25s linear;
+	transition: border .25s linear, color .25s linear, background-color .25s linear;
+}
+.form-group input{
+	display: block;
+	padding-top: 15px;
+	margin-bottom: 20px;
+	position: relative;
+}
+form .help-block.text-danger > ul{
+	padding-left: 0;
+	list-style: none;
+	margin: 10px auto;
+}
+form .help-block.text-danger > ul>li{
+	display: block;
+    padding: 5px 8px;
+    color: #eee;
+    font-size: 13px;
+    background: #F44336;
+    margin: 5px auto;
+}
+
+form #success{
+	padding-top: 10px;
+}
+/* --->>> FOOTER <<<---
+-------------------------------------------------------------- */
+
+footer {
+	padding: 40px 0;
+	color:#666;
+	background: #111;
+}
+footer .copy{
+	text-align: center;
+}
+/* ==================================
+   --->>>     Media Queries    <<<---
+   ==================================  */
+
+   /* Small devices (tablets and up) */
+@media (min-width:768px) {
+	section.main-banner h1{
+		font-size: 6.4em;
+	}
+	section.main-banner{		
+		padding-top: 15%;
+	}
+	.float {
+		right: 40px;
+		bottom: 40px;
+	}
+}
