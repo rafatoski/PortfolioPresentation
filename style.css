@@ -233,7 +233,18 @@ section.portfolio{
 .heading-portfolio{
 	margin-bottom: 35px;
 }
-
+/* === */
+.breadcrumb {
+	background-color: #222;
+	color: #eee;
+	}
+.ux-image {
+	width: 99%;
+	margin: 14px auto;
+}
+.table-dark {background-color: #000;}
+table thead {font-weight: bold;}
+table th {font-weight: 300;}
 /* --->>> PROJECTS <<<---
 -------------------------------------------------------------- */
 .card .card-desc {
