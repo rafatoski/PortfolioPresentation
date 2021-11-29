@@ -233,6 +233,38 @@ section.portfolio{
 .heading-portfolio{
 	margin-bottom: 35px;
 }
+
+/* CAse study */
+section.case-study{
+	background:transparent;
+	color: #eee;
+	font-size: 17px;
+	letter-spacing: 0.04em;
+	line-height: 25px;
+	min-height: 300px;
+	padding-bottom: 80px;
+	padding-top: 40px;
+}
+h3.title {
+	display: inline-block;
+	position: relative;
+	padding: 10px;
+	padding-left: 0;
+	margin: 20px 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 2.2em;
+}
+h3.title::before{
+	content:'';
+	position: absolute;
+	background-color: #fefefe;
+	width: 52%;
+	height: 3px;
+	bottom: 0;
+  }
+
+  .text-center {text-align: center;}
 /* === */
 .breadcrumb {
 	background-color: #222;
@@ -345,6 +377,7 @@ section.about-me{
 	text-shadow: none;
 }
 
+/* */
 
 .form-control {
 	border-radius:0;
