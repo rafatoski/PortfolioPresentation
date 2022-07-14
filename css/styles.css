@@ -1,0 +1,377 @@
+/*-------------------------------------------*\ 
+   Indice
+   - Colores
+   - Fuentes y Tipografia
+   - Botones
+   - Navegacion
+   - Dark Mode Switch
+   - Estilos General
+\*-------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+/*-------------------------------------------*\
+    Colores
+\*-------------------------------------------*/
+:root {
+    --color-primario:#fb383b;
+    --color-light:#fd7e14;
+    --color-texto:#eee;
+    --color-texto-light:#222;
+    --border-color: #685b5b;
+    --border-color-light:#857962;
+}
+.color , .fill-color{
+    color: var(--color-primario);
+}
+
+body.light .color{
+    color: var(--color-light);
+}
+.border-down {
+    border-bottom-width:1px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--border-color);
+}
+.border-up{
+    border-top:1px solid ;
+    border-top-color: var(--border-color);
+}
+body.light .border-down{
+    border-bottom-color: var(--border-color-light);
+}
+body.light .border-up{
+    border-top-color: var(--border-color-light);
+}
+.carousel-indicators [data-bs-target] {
+    background-color: var(--color-primario);
+    opacity: .3;
+}
+body.light .carousel-indicators [data-bs-target]{
+    background-color: var(--color-light);
+    opacity: .3;
+}
+.carousel-indicators .active , body.light .carousel-indicators .active {
+    opacity: 1;
+}
+
+/*-------------------------------------------*\
+    Fonts
+\*-------------------------------------------*/
+body{
+    background-color: #323137;
+    font-family: 'lato', sans-serif;
+    font-size: 14px;
+    transition: all .3s ease;
+    color:var(--color-texto);
+}
+
+body.light{
+    background-color: #f3f3f3;
+    color: var(--color-texto-light);
+}
+
+.amp{
+    font-family: 'Playfair Display', serif;
+}
+
+.fw-900{
+    font-weight: 900;}
+.border{
+    border-color: #121212;
+}
+body.light .border {
+    border-color: #666;
+}
+.text-muted{
+    color: rgba(var(--color-texto),.65)!important;
+}
+body.light .text-muted{
+    color: rgba(var(--color-texto-light),.65)!important;
+}
+
+/*-------------------------------------------*\
+    botones
+\*-------------------------------------------*/
+.btn:hover{
+    text-decoration: none;
+    filter: brightness(.9);
+}
+.btn-primary {
+    color: #fff;
+    font-weight: bold;
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+.btn-primary:hover {
+    color: whitesmoke;
+    background: var(--color-primario);
+    border-color: var(--color-primario);
+    
+}
+
+body.light .btn-primary{
+    color: white;
+    background-color: var(--color-light);
+    border-color: var(--color-light);
+}
+body.light .btn-primary:hover{
+    color: white;
+    background-color: var(--color-light);
+
+}
+.btn-outline-primary {
+    color: var(--color-primario);
+    border-color:var(--color-primario);
+}
+.btn-outline-primary:hover {
+    color: whitesmoke;
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+    text-decoration: none;
+}
+.btn-outline-secondary {
+    color: whitesmoke;
+    border-color:whitesmoke;
+}
+.btn-outline-secondary:hover {
+    color: var(--color-primario);
+    background-color:black;
+    border-color: black;
+    text-decoration: none;
+}
+body.light .btn-outline-primary {
+    color: var(--color-light);
+    border-color:var(--color-light);
+}
+body.light .btn-outline-primary:hover {
+    background-color:var(--color-light);
+    border-color:var(--color-light);
+}
+body.light .btn-outline-secondary {
+    color: var(--color-light);
+    border-color:var(--color-light);
+}
+body.light .btn-outline-secondary:hover {
+    color: whitesmoke;
+    background-color:var(--color-light);
+    border-color:var(--color-light);
+}
+a, a.link{
+    color:var(--color-primario);
+    text-decoration: none;
+}
+a:hover, a.link:hover{
+    color: var(--color-primario);
+    text-decoration: underline;
+}
+body.light a, a.link{
+    color: var(--color-light);
+}
+body.light a:hover, a.link:hover{
+    color: var(--color-light);
+}
+/*-------------------------------------------*\
+    Navegación
+\*-------------------------------------------*/
+.nav-pills .nav-link.active {
+    color: white;
+    background-color: #28272785;
+}
+.nav-link {
+    color: var(--color-primario);
+}
+.nav-link:focus, .nav-link:hover{
+    color: inherit;
+    font-weight: bold;
+}
+body.light .nav-pills .nav-link.active {
+    color: black;
+    background-color:#a7a7a74f ;
+}
+body.light .nav-link {
+    color: var(--color-light);
+}
+/*-------------------------------------------*\
+    Dark Mode Swtich
+\*-------------------------------------------*/
+.switch{
+    background: #343d5b;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor:pointer;
+    display: flex;
+    outline: none;
+    float: right;
+
+    transition: all ease .3s;
+}
+.switch::after{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #f1f1f1;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: all ease .3s;
+    box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
+}
+.switch.active{
+    background: orange;
+    color: black;
+}
+.switch.switch.active::after{
+    right: 0;
+    left: unset;
+}
+.switch span{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background: none;
+    color: white;
+}
+/*-------------------------------------------*\
+    Product Cards | Cards
+\*-------------------------------------------*/
+.product-card{
+    margin-bottom: 1rem;
+    display: block;
+    font-size: 14px;
+    -webkit-perspective: 1000px;
+    perspective: 1000px; 
+}
+
+.product-card__body {
+    position: relative;
+    top: 0;
+    display: block;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 9px; 
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+.product-card:hover .product-card__body{
+    top: -2px;
+    -webkit-box-shadow: 0 25px 20px -20px rgb(0 0 0 / 30%), 0 0 15px rgb(0 0 0 / 6%);
+    box-shadow: 0 25px 20px -20px rgb(0 0 0 / 30%), 0 0 15px rgb(0 0 0 / 6%);
+}
+.product-card__body__overlay {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+.product-card__body:hover .product-card__body__overlay {
+    opacity: 1;
+    visibility: visible;
+}
+.product-card__footer {
+    padding: 15px 8px;
+}
+.product-card__footer__name {
+    font-weight: 600;
+    font-size: larger;
+    margin-bottom: auto;
+}
+.product-card__footer__info{
+    font-weight: 300;
+    line-height: 1;
+}
+
+.card{
+    background-color:rgb(33,37,41);
+    border: none;
+     
+}
+.card.bordered{
+    border: 1px solid #111;
+}
+body.light .card{
+    background-color:rgb(248,249,250);
+}
+body.light .card.bordered{
+    border: 1px solid #cfcfcf;
+}
+.card.shadow{
+    -webkit-box-shadow: 0 25px 20px -20px rgb(0 0 0 / 30%), 0 0 15px rgb(0 0 0 / 6%)!important;
+    box-shadow: 0 25px 20px -20px rgb(0 0 0 / 30%), 0 0 15px rgb(0 0 0 / 6%)!important;
+}
+/*-------------------------------------------*\
+    Estilos Generales
+\*-------------------------------------------*/
+.hero{
+    background-image: url(../img/hero-bg-dark.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: screen;
+    backdrop-filter: saturate(0.5);
+}
+body.light .hero{
+    background-image: url(../img/hero-bg-light.png);
+}
+.featuredWork{
+    background-image: url(../img/bg-featuredWork.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+}
+body.light .featuredWork{
+    background-image: url(../img/bg-featuredWork-light.png);
+} 
+.footer{
+    background-image: url(../img/bg-dark-footer.png);
+    background-size: cover;
+    background-position: bottom;
+}
+body.light .footer{
+    background-image: url(../img/bg-light-footer.png);
+}
+/* ===== */
+.hero-work{
+    background:linear-gradient(35deg, #bb999924, #ffffff00);
+}
+body.light .hero-work{
+    background: linear-gradient(35deg, #bbb5998f, #ffffff00);
+}
+.hero-about{
+    background:linear-gradient(325deg, #bb999924, #ffffff00);
+}
+body.light .hero-about{
+    background: linear-gradient(325deg, #bbb5998f, #ffffff00);
+}
+.hero-contact{
+    background:linear-gradient(180deg, #bb999924, #ffffff00);
+}
+body.light .hero-contact{
+    background: linear-gradient(180deg, #bbb5998f, #ffffff00);
+}
+
+.space-bottom-2x{
+    margin-bottom: 20vh;
+}
+.imagen-preview{
+    margin-top: -20vh;
+}
+.imagen-preview img{
+    max-width: 80%;
+}

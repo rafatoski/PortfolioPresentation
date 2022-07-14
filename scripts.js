@@ -1,1 +1,0 @@
-$(window).load(function(){$("#preloader").delay(50).fadeOut("slow")}),$(window).on("load",function(){$("#hero").css("height",window.innerHeight+"px"),$(".ripple").materialripple()}),$("a[href*=#]").on("click",function(o){o.preventDefault(),$("html,body").animate({scrollTop:$(this.hash).offset().top},1200,"swing")});

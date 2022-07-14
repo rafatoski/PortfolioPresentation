@@ -1,207 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Rafael Castillo | Creative Web Dreamer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="theme-color" content="#222222" />
-    <meta name="description" content="Rafael Castillo portfolio | Creative Web Designer and Front-End Developer">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <meta name="author" content="Rafael Castillo">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/jquery.materialripple.css">
-    <link rel="stylesheet" href="style.min.css">
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="shortcut icon" href="images/favicon.png">
-    <!--<link rel="apple-touch-icon" href="images/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">-->
-</head>
-
-<body>
-    <div id="preloader"></div>
-    <header></header>
-    <section id="hero" class="main-banner parallax-window" data-parallax="scroll" data-image-src="images/hero-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-                    <div class="avatar wow fadeInDown">
-                        <figure><img src="images/128.jpg" alt="" class="img-responsive img-circle "></figure>
-                    </div>
-                    <h2 class="top wow fadeInUp" data-wow-delay=".7s">Welcome, I'm <span class="color-main name">Rafael Castillo</span> </h2>
-                    <h1 class="wow fadeIn" data-wow-delay=".5s">Creative Web Dreamer</h1>
-                    <h2 class="bottom wow fadeInDown" data-wow-delay=".7s">And I <color class="color-main">Design <span class="amp">&amp;</span> Build</color> Experiences</h2><a href="#portfolio" class="btn-general ripple">See My Work</a></div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Rafael Castillo | Creative Web Dreamer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/44ef6350f9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <section class="hero" > 
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
+        <a  class="col-md-3 mb-2 mb-md-0">
+        </a>
+        <ul class="nav nav-pills nav-fill">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="work.html" class="nav-link">Works</a></li>
+          <li class="nav-item"> <a class="navbar-brand px-2">
+            <img src="img/logo.png" alt="Logo" width="34"></a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>  
+        <div class="col-md-3 text-end mx-3 mt-md-0 mt-5">
+          <button class="switch" id="switch">
+            <span><i class="fa-solid fa-sun"></i></span>
+            <span><i class="fa-solid fa-moon"></i></span>
+          </button>
+        </div><!--Ligth mode triger-->
+      </header><!--/header-->
+      <div class="px-4 pt-5 my-5 text-center border-down">
+        <h2 class="lead amp mt-2">Welcome I'm  Rafael Castillo</h2>
+          <h1 class="display-1 fw-900 text-uppercase px-4 mx-auto">Creative Web Dreamer</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4 amp">And I <span class="color">design &amp; build</span>  custom web products focused on user experience.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+              <a href="#featuredwork" class="btn btn-primary btn-lg px-4 me-sm-3"><i class="fa-solid fa-briefcase"></i> See My Work</a>
+              <a href="#contactMe" class="btn btn-outline-secondary btn-lg px-4"><i class="fa-solid fa-pen"></i>  Contact Me</a>
             </div>
-        </div>
-    </section>
-    <div id="float"><a href="" class="float wow zoomIn ripple" data-wow-delay="2s" data-toggle="modal" data-target="#contactModal"><i class="fa fa-envelope-o my-float"></i></a>
-        <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Please fill this Formulary</h4></div>
-                    <div class="modal-body">
-                        <form name="sentMessage" id="contactForm" novalidate="">
-                            <div class="form-row">
-                                <div class="col-xs-12">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Your Name *" id="name" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
-                                        <input type="email" class="form-control" placeholder="Your Email *" id="email" required="" data-validation-required-message="Please enter your email address." aria-invalid="false">
-                                        <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required="" data-validation-required-message="Please enter your phone number." aria-invalid="false">
-                                        <textarea class="form-control" placeholder="Your Message *" id="message" required="" data-validation-required-message="Please enter a message." aria-invalid="false"></textarea>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <button type="submit" class="btn btn-block btn-send ripple"><i class="fa fa-paper-plane"></i> Send Message</button>
-                                    <div id="success"></div>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        </form>
-                    </div>
+          </div>
+          <div class="overflow-hidden" style="max-height: 40vh;">
+            <div class="container px-lg-5">
+              <div id="carouselHero" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/DEMO-bingewave.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/DEMO-esmart.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/DEMO-ohfoodie.png" class="d-block w-100" alt="...">
+                  </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div><!--/carousel-->
             </div>
-        </div>
-    </div>
-    <section class="featured parallax-window" data-parallax="scroll" data-image-src="images/bg_one_page1.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6 wow fadeIn">
-                    <h6 class="color-main">Featured Project</h6>
-                    <h3 class="name-project">BancoEstado Chile | Case Study</h3>
-                    <div class="desc ">
-                        <p>In this case study, I carried out a pragmatic investigation giving some ideas to improve the user experience and devising some adjustments to the main interface of a Bank, as a proposal for the <b>Modyo agency</b>.</p>
-                    </div>
-                    <div class="btn-container wow fadeInDown" data-wow-delay=".5s"><a href="case-study/banco-estado.html" class="btn-general ripple">See More</a></div>
+          </div>
+      </div>
+    </section><!--/.hero-->
+    <main class="content" >
+        <div class="container px-4 py-5" id="whatIdo">
+            <h2 class="amp pb-2 border-down">What I Do</h2>
+        
+            <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-5">
+              <div class="col">
+                <div class="card h-100 overflow-hidden rounded-4 shadow" >
+                  <div class="d-flex flex-column h-100 p-5 pb-3  text-shadow-1">
+                    <h2 class="pt-md-5 mt-md-5 mb-4 display-6 lh-1 fw-bold">Graphic and Visual Design <span class="color">UI/UX</span> for Products</h2>
+                    <p>I will design the visual strategy that will make your product or brand stand out on the internet, focused on humans, creatively idealize the interface and interactions so that it becomes a functional website or application adapted to all screen sizes. I can also create design images in different resolutions to boost your online presence.</p>
+                  </div>
                 </div>
-                <div class="col-sm-6 wow fadeIn">
-                    <div class="thumbnail-container">
-                        <a href="case-study/banco-estado.html">
-                            <figure><img src="images/ux-case-bancoEstado.jpg" alt="" class="img-responsive"></figure>
-                        </a>
-                    </div>
+              </div>
+              <div class="col">
+                <div class="card  h-100 overflow-hidden  rounded-4 shadow" >
+                  <div class="d-flex flex-column h-100 p-5 pb-3  text-shadow-1">
+                    <h2 class="pt-md-5 mt-md-5 mb-4 display-6 lh-1 fw-bold">Clean code <span class="color">Front-End </span> and Interactivy for Tecnology</h2>
+                    <p>All kinds of web platforms and apps designed and built in the most robust, modern and clean way with which your users can interact meaningfully and the desired purpose can be achieved, we will effectively make your users customers, improving the experience of user with less effort and more results.</p>
+                  </div>
                 </div>
+              </div>
+        
             </div>
-        </div>
-    </section>
-    <section id="portfolio" class="portfolio parallax-window" data-parallax="scroll" data-image-src="images/bg_two.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 heading wow fadeIn">
-                    <h3 class="title">Some Works</h3>
-                    <p class="subtitle">I always strive to work better and I never stop, here is an example of some projects that I was able to publish</p>
-                </div>
-                <div class="col-xs-12">
-                    <div class="container">
-                        <div class="row wow fadeInUp" data-wow-delay=".3s">
-                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <figure><img src="images/portfolio/myg.jpg" alt="" class="img-responsive"></figure>
-                                    </div>
-                                    <div class="card-desc">
-                                        <h6 class="project-name">M&amp;G Zapatillas - eCommerce</h6>
-                                        <p class="color-main">UI/UX</p>
-                                    </div>
-                                </div>
+        </div><!-- 1 -->
+        <div class="container px-4 py-5" id="whyHireMe">
+            <h2 class="amp pb-2 border-down">Why Hire Me?</h2>
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+              <div class="col"> 
+                <p class="fs-5 lh-base">In my 6+ years of experience in remote working crossing all kinds of areas, I have grow versatility, professionalism and ability to being able to quickly adapt to any sector and platform. <br> The purpose of offering you my services as a designer/developer is to optimize your online brand keeping it at the forefront cutting-edge at a low cost with high quality results exceeding expectations.</p>
+                <a href="work.html" class="btn btn-primary">View My Work </a>
+              </div>
+              <div class="feature col">
+                <div id="testimonialsSlider" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-indicators " style="margin-bottom: -1rem;">
+                    <button type="button" data-bs-target="#testimonialsSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#testimonialsSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#testimonialsSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="card bordered mb-3 p-3 w-100">
+                        <div class="row g-0 d-flex align-items-center px-3">
+                          <div class="col-md-3">
+                            <img src="img/user-kosta.jpg" class="img-fluid rounded-circle" alt="..." width="120">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body text-md-start">
+                              <h5 class="card-title fw-bold">Kosta Panagoulias</h5>
+                              <p class="card-text mb-0"><small class="text-muted">President, Web4Realty</small></p>
+                              <p class="card-text">He was an absolute pleasure to work with and a positive contributor to the productivity and culture of the company. I can highly recommend Rafael to any organization looking for a reliable, trustworthy and talented employee.</p>
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <figure><img src="images/portfolio/stone-deal.jpg" alt="" class="img-responsive"></figure>
-                                    </div>
-                                    <div class="card-desc">
-                                        <h6 class="project-name"><a href="http://www.stonedeal.com/" target="_blank">Stone Deals - eCommerce </a> </h6>
-                                        <p class="color-main">UI/UX</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <figure><img src="images/portfolio/mystrong.jpg" alt="" class="img-responsive"></figure>
-                                    </div>
-                                    <div class="card-desc">
-                                        <h6 class="project-name"><a href="http://mystrongraphic.com/" target="_blank">My Strong Graphic - Agency </a> </h6>
-                                        <p class="color-main">UI/UX - WordPress</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 col-md-3">
-                                <div class="card">
-                                    <div class="card-image">
-                                        <figure><img src="images/portfolio/esmart.jpg" alt="" class="img-responsive"></figure>
-                                    </div>
-                                    <div class="card-desc">
-                                        <h6 class="project-name"><a href="http://esmartdigital.com/" target="_blank">eSmart Digital - Agency </a> </h6>
-                                        <p class="color-main">UI/UX - WordPress</p>
-                                    </div>
-                                </div>
-                            </div>
+                          </div>
                         </div>
-                        <div class="row wow fadeIn" data-wow-delay="2s">
-                            <div class="col-xs-12">
-                                <div class="more"><a href="https://www.behance.net/rafatoski910f" class="btn-general ripple">See All Projects</a></div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="card bordered mb-3 p-3 w-100">
+                        <div class="row g-0 d-flex align-items-center px-3">
+                          <div class="col-md-3">
+                            <img src="img/user-lfroman.jpg" class="img-fluid rounded-circle" alt="..." width="120">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body text-md-start">
+                              <h5 class="card-title fw-bold">Luis Felipe Roman</h5>
+                              <p class="card-text mb-0"><small class="text-muted">Senior Frontend Developer | React</small></p>
+                              <p class="card-text">Rafael is extremely creative and self-motivated. I had the chance to work with him on a couple of projects, and his UX skills are top-notch, I definitely recommend him for any web-related project.</p>
                             </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                    <div class="carousel-item">
+                     <div class="card bordered mb-3 p-3 w-100">
+                        <div class="row g-0 d-flex align-items-center px-3">
+                          <div class="col-md-3">
+                            <img src="img/user-devin.jpg" class="img-fluid rounded-circle" alt="..." width="120">
+                          </div>
+                          <div class="col-md-9">
+                            <div class="card-body text-md-start">
+                              <h5 class="card-title fw-bold">Devin Dixon</h5>
+                              <p class="card-text mb-0"><small class="text-muted">Founder & CEO at BingeWave</small></p>
+                              <p class="card-text">Demonstrated his ability to communicate with the development team and make decisions quickly that greatly benefited the visual aspect and performance, and he has excelled in his role.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div> 
             </div>
-        </div>
-    </section>
-    <section class="about-me parallax-window" data-parallax="scroll" data-image-src="images/bg_three.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 heading wow fadeIn">
-                    <h3 class="title">About Me</h3>
-                    <p class="subtitle">A short description of my motivations and personality, a hint is I really love cats and video games.</p>
-                </div>
-                <div class="col-xs-12 col-sm-6 hidden-xs wow fadeInLeft" data-wow-delay=".52s">
-                    <div class="profile-photo">
-                        <fgure><img src="images/photo.png" alt="" class="img-responsive"></fgure>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 wow fadeInRight" data-wow-delay=".7s">
-                    <h6 class="color-main slogan">Rafael Castillo</h6>
-                    <h3 class="name">Creative Web Dreamer</h3>
-                    <div class="desc ">
-                        <p>💻🖌 Web Designer, starting at 2015 designing, programming and leading web technology projects in different sectors of consumption, service and multiple platforms. In order to optimize communication, online brand presence and lead generation. Highly creative, disruptive, self-taught, purposeful, seeking solutions and achieving organizational goals. </p>
-                    </div>
-                    <ul class="list-inline social">
-                        <li><a href="https://twitter.com/FuegoKingSaving" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://www.facebook.com/RAFAELCASTILLOAC" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://www.behance.net/rafatoski910f" target="_blank"><i class="fa fa-behance"></i></a></li>
-                        <li><a href="https://github.com/rafatoski" target="_blank"><i class="fa fa-github-alt"></i></a></li>
-                        <li><a href="https://stackoverflow.com/users/6362059/rafael-castillo?tab=profile" target="_blank"><i class="fa fa-stack-overflow"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/rafaelcastilllo" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="tel:+5732294941312"><i class="fa fa-whatsapp"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="copy"><img src="images/logo.png" alt="" class="logo"> © Creative Web Dreamer | Since 2016 </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/parallax.min.js"></script>
-<script src="js/jquery.materialripple.js"></script>
-<script src="js/contact_me.js"></script>
-<script src="js/jqBootstrapValidation.js"></script>
-<script src="js/wow.min.js"></script>
-<script>
-    new WOW().init();
-</script>
-<script src="js/scripts.js"></script>
+        </div><!-- 2 -->
+      <section class="featuredWork">
+        <div class="container px-4 py-5" id="featuredwork">
+            <h2 class="amp pb-2 border-down">Featured Work</h2>
+        
+            <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-5">
+              <div class="col">
+                <div class="product-card">
+                  <div class="product-card__body">
+                    <a href="work/ohfoodie.html" class="d-block"   data-bs-toggle="tooltip" data-bs-placement="top" title="Click to view project">
+                      <img src="img/DEMO-ohfoodie.png" class="img-fluid" alt="Bingewave">
+                    </a>
+                    <a href="https://ohfoodie.com/" target="_blank" class="product-card__body__overlay btn btn-primary btn-sm"><i class="fa-solid fa-link"></i> View Website</a>
+                  </div><!--/.product-card-body-->
+                  <div class="product-card__footer">
+                    <p class="product-card__footer__name">OH foodie! - eCommerce Website</p>
+                    <p class="product-card__footer__info">Product Designer UI/UX front-end Developer</p>
+                  </div><!--/.product-card-footer-->
+                </div><!--./product-card-->
+              </div><!--/.col-->
+        
+              <div class="col">
+                <div class="product-card">
+                  <div class="product-card__body">
+                    <a   class="d-block">
+                      <img src="img/DEMO-bingewave.png" class="img-fluid" alt="Bingewave">
+                    </a>
+                    <a href="https://www.bingewave.com/" target="_blank" class="product-card__body__overlay btn btn-primary btn-sm"><i class="fa-solid fa-link"></i> View Website</a>
+                  </div><!--/.product-card-body-->
+                  <div class="product-card__footer">
+                    <p class="product-card__footer__name">Bingewave - Startup Website</p>
+                    <p class="product-card__footer__info">Product Designer UI/UX front-end Developer</p>
+                  </div><!--/.product-card-footer-->
+                </div><!--./product-card-->
+              </div><!--/.col-->
 
+              <div class="col">
+                <div class="product-card">
+                  <div class="product-card__body">
+                    <a  class="d-block">
+                      <img src="img/DEMO-stonedeals.png" class="img-fluid" alt="StoneDeals">
+                    </a>
+                    <a href="http://www.stonedeal.com/" target="_blank" class="product-card__body__overlay btn btn-primary btn-sm"><i class="fa-solid fa-link"></i> View Website</a>
+                  </div><!--/.product-card-body-->
+                  <div class="product-card__footer">
+                    <p class="product-card__footer__name">StoneDeals - eCommerce</p>
+                    <p class="product-card__footer__info"> Designer UI/UX</p>
+                  </div><!--/.product-card-footer-->
+                </div><!--./product-card-->
+              </div><!--/.col-->
+
+              <div class="col">
+                <div class="product-card">
+                  <div class="product-card__body">
+                    <a class="d-block">
+                      <img src="img/DEMO-elliotwave.png" class="img-fluid" alt="Elliot Wave Forecast">
+                    </a>
+                    <a href="https://elliottwave-forecast.com/" target="_blank" class="product-card__body__overlay btn btn-primary btn-sm"><i class="fa-solid fa-link"></i> View Website</a>
+                  </div><!--/.product-card-body-->
+                  <div class="product-card__footer">
+                    <p class="product-card__footer__name">Elliot Wave ForeCast  - Website</p>
+                    <p class="product-card__footer__info"> Designer UI/UX</p>
+                  </div><!--/.product-card-footer-->
+                </div><!--./product-card-->
+              </div><!--/.col-->
+        
+            </div>
+        </div><!-- 3 -->
+      </section>
+        <section class="aboutMe"  id="aboutMe">
+          <div class="container border-down  px-4 pt-5 pb-0">
+              <h2 class="amp pb-2 border-down">About Me</h2>
+              <div class="row g-4 pt-5 row-cols-1 row-cols-lg-2">
+                <div class="col align-self-center"> 
+                  <h2 class="fw-normal amp">Creative Web Dreamer</h2>
+                  <p class="fs-5 lh-base">Hi! Is glad to see you here, I'm Rafael Castillo a professional designer and programmer, a builder of human experiences in a virtual world. Lover of new technologiest and constantly lerning of that. <br></p>
+                  <p class="fs-5 lh-base"> I have had the opportunity to work with companies that have different needs, the experience and my ability to adapt to them has given value to the designs, having successful results. thanks to this I have become a design leader managing to speed up the productivity of a company. <br></p>
+                  <p class="fs-5 lh-base">Being creative, disruptive, determined, self-taught, has resulted in me doing this with great passion. <br> ¡Let's build together!</p>
+                  <a href="about.html" class="btn btn-primary btn-sm">
+                    Discover More About Me
+                  </a> 
+                </div>
+                <div class="text-center col order-lg-first ">
+                    <img src="img/portraitFoto.png" class="img-fluid" alt="Profile Photo" alt="Profile Foto" width="470">
+                </div> 
+              </div>
+          </div><!-- 4 -->
+        </section><!--/About Me-->
+    </main>
+    <section class="footer">
+      <div class="container px-4 py-5" id="contactMe">
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+              <div class="col">
+                <div class="card rounded-4 shadow">
+                  <div class="card-body">
+                    <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> LinkedIn</h2>
+                    <p class="card-text">This is my main professional social network. We can connect as a company and employee, see more information about my jobs and experience as well as my certificates.</p>
+                    <a href="https://www.linkedin.com/in/rafaelcastilllo/" target="_blank" class="btn btn-primary"><i class="fa-brands fa-linkedin"></i> Let's Connect</a>
+                  </div><!--/card body -->
+                </div><!--/card--> 
+              </div><!--/col-->
+  
+              <div class="col">
+                <div class="card rounded-4 shadow">
+                  <div class="card-body">
+                    <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> Twitter</h2>
+                    <p class="card-text">Here you can find what I think of some current situations related to technology or my group of friends, family and co-workers, you can contact me informally here</p>
+                    <a href="#" class="btn btn-primary"><i class="fa-brands fa-twitter"></i> Read and Discuss</a>
+                  </div><!--/card body -->
+                </div><!--/card--> 
+              </div><!--/col-->
+  
+              <div class="col">
+                <div class="card rounded-4 shadow">
+                  <div class="card-body">
+                    <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> Github</h2>
+                    <p class="card-text">Want to know which technologies that I use, resources, exercises , practices different versions of websites all the repositories here you find them.</p>
+                    <a href="https://github.com/rafatoski" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github-alt"></i> Repositories</a>
+                  </div><!--/card body -->
+                </div><!--/card--> 
+              </div><!--/col-->
+  
+              <div class="col">
+                <div class="card rounded-4 shadow">
+                  <div class="card-body">
+                    <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> Email</h2>
+                    <p class="card-text">You want to promote your brand or a product need, you need support or an idea of design, write me and we can improve the experience of your users.</p>
+                    <a href="mailto:rafaelcastilloac89@gmail.com" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send Message</a>
+                  </div><!--/card body -->
+                </div><!--/card--> 
+              </div>
+        
+            </div>
+      </div><!-- 5 -->
+      <div class="container">
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-up">
+            <p class="col-md-4 mb-0 ">© 2022 Creative Web Dreamer, All Rights Reserved</p>
+        
+        
+            <ul class="nav col-md-4 justify-content-end">
+              <li class="nav-item"><a href="#" class="nav-link px-2 ">Home</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 ">Work</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 ">About</a></li>
+              <li class="nav-item"><a href="#" class="nav-link px-2 ">Contact</a></li>
+            </ul>
+          </footer>
+      </div><!--/copy-->
+    </section> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
