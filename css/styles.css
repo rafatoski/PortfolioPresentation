@@ -5,6 +5,8 @@
    - Botones
    - Navegacion
    - Dark Mode Switch
+   - Product Cards
+   - Animación Hero Home
    - Estilos General
 \*-------------------------------------------*/
 *{
@@ -71,6 +73,8 @@ body{
     font-size: 14px;
     transition: all .3s ease;
     color:var(--color-texto);
+
+    overflow-x:hidden;
 }
 
 body.light{
@@ -314,8 +318,30 @@ body.light .card.bordered{
     box-shadow: 0 25px 20px -20px rgb(0 0 0 / 30%), 0 0 15px rgb(0 0 0 / 6%)!important;
 }
 /*-------------------------------------------*\
+    Animación Hero Home
+\*-------------------------------------------*/
+ .hero-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    
+ }
+ .hero-title{
+    font-size: 7rem;
+    letter-spacing: -3px;
+    line-height: .9;
+ }
+/*-------------------------------------------*\
     Estilos Generales
 \*-------------------------------------------*/
+.preloader{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color:rgba(51, 51, 51, 0.92);
+}
 .hero{
     background-image: url(../img/hero-bg-dark.png);
     background-size: cover;
@@ -346,24 +372,30 @@ body.light .featuredWork{
 body.light .footer{
     background-image: url(../img/bg-light-footer.png);
 }
-/* ===== */
+/*-------------------------------------------*\
+    Fondos Hero & Titulos
+\*-------------------------------------------*/
+.hero-bg{
+    background-size:cover;
+    background-position:center;
+}
 .hero-work{
-    background:linear-gradient(35deg, #bb999924, #ffffff00);
+    background-image: url(../img/bg-dark-expousure-1.jpg);
 }
 body.light .hero-work{
-    background: linear-gradient(35deg, #bbb5998f, #ffffff00);
+    background-image: url(../img/bg-expousure-3.jpg);
 }
 .hero-about{
-    background:linear-gradient(325deg, #bb999924, #ffffff00);
+    background-image: url(../img/bg-dark-expousure-2.jpg);
 }
 body.light .hero-about{
-    background: linear-gradient(325deg, #bbb5998f, #ffffff00);
+    background-image: url(../img/bg-expousure-2.jpg);
 }
 .hero-contact{
-    background:linear-gradient(180deg, #bb999924, #ffffff00);
+    background-image: url(../img/bg-dark-expousure-3.jpg);
 }
 body.light .hero-contact{
-    background: linear-gradient(180deg, #bbb5998f, #ffffff00);
+    background-image: url(../img/bg-expousure-1.jpg);
 }
 
 .space-bottom-2x{

@@ -10,9 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/44ef6350f9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body >
+    <div class="preloader"></div><!--/preloader-->
     <section class="hero-contact" > 
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
         <a  class="col-md-3 mb-2 mb-md-0">
@@ -25,7 +27,7 @@
             <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a class="nav-link active">Contact</a></li>
         </ul>  <!--/NAVIGATION-->
-        <div class="col-md-3 text-end mx-3 mt-md-0 mt-5">
+        <div class="col-md-3 text-end mx-3 mt-md-0 mt-5 wow bounceInRight" data-wow-delay="1s">
           <button class="switch" id="switch">
             <span><i class="fa-solid fa-sun"></i></span>
             <span><i class="fa-solid fa-moon"></i></span>
@@ -33,8 +35,8 @@
         </div><!--Light mode switcher-->
       </header><!--/header-->
       <div class="px-4 py-5 my-5 text-center border-down">
-          <h1 class="display-1 fw-900 text-uppercase px-4 mx-auto">Contact Me</h1>
-          <div class="col-lg-6 mx-auto mb-5">
+          <h1 class="display-1 fw-900 text-uppercase px-4 mx-auto ">Contact Me</h1>
+          <div class="col-lg-6 mx-auto mb-5 wow fadeInDown" data-wow-delay=".5s">
             <p class="lead fw-bold my-4">Let's be friends. Let's chat about your project</p>
           </div> 
       </div>
@@ -43,13 +45,13 @@
       <section class="contact-section">
         <div class="container px-4 py-5" >        
             <div class="row row-cols-1 row-cols-lg-2 align-items-center g-4 py-5">
-              <div class="col">
+              <div class="col wow fadeInLeft" data-wow-delay=".6s">
                 <h2 class="display-4 amp border-bottom pb-3 mb-5">You want to bring your idea to life.</h2>
                 <p class="fs-5">Do you want to know about my availability, rates, possibility of collaboration or simply, do you want to chat about technology or the Internet write me it will be a pleasure for me to read your message and know what we can do together to defend the future of the web</p>
                 <a class="btn btn-sm btn-outline-primary" href="mailto:rafaelcastilloac89@gmail.com">rafaelcastilloac89@gmail.com</a>
               </div><!--/.col-->
         
-              <div class="col">
+              <div class="col wow fadeInRight" data-wow-delay=".6s">
                 <div id="carouselHero" class="carousel slide carousel-fade" data-bs-ride="carousel">
                   <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -88,7 +90,7 @@
     <section class="footer">
       <div class="container px-4 py-5" id="contactMe">
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-              <div class="col">
+              <div class="col wow fadeIn" data-wow-delay=".2s">
                 <div class="card rounded-4 shadow">
                   <div class="card-body">
                     <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> LinkedIn</h2>
@@ -98,7 +100,7 @@
                 </div><!--/card--> 
               </div><!--/col-->
   
-              <div class="col">
+              <div class="col wow fadeIn" data-wow-delay=".4s">
                 <div class="card rounded-4 shadow">
                   <div class="card-body">
                     <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> Twitter</h2>
@@ -108,7 +110,7 @@
                 </div><!--/card--> 
               </div><!--/col-->
   
-              <div class="col">
+              <div class="col wow fadeIn" data-wow-delay=".6s">
                 <div class="card rounded-4 shadow">
                   <div class="card-body">
                     <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> Github</h2>
@@ -118,7 +120,7 @@
                 </div><!--/card--> 
               </div><!--/col-->
   
-              <div class="col">
+              <div class="col wow fadeIn" data-wow-delay=".6s">
                 <div class="card rounded-4 shadow">
                   <div class="card-body">
                     <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> Email</h2>
@@ -131,20 +133,21 @@
             </div>
       </div><!-- 5 -->
       <div class="container">
-          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-up">
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-up">
             <p class="col-md-4 mb-0 ">© 2022 Creative Web Dreamer, All Rights Reserved</p>
         
         
             <ul class="nav col-md-4 justify-content-end">
-              <li class="nav-item"><a href="index.html" class="nav-link px-2 ">Home</a></li>
+              <li class="nav-item"><a href="index.html"  class="nav-link px-2 ">Home</a></li>
               <li class="nav-item"><a href="work.html" class="nav-link px-2 ">Work</a></li>
               <li class="nav-item"><a href="about.html" class="nav-link px-2 ">About</a></li>
-              <li class="nav-item"><a  class="nav-link px-2 ">Contact</a></li>
+              <li class="nav-item"><a class="nav-link px-2 ">Contact</a></li>
             </ul>
           </footer>
       </div><!--/copy-->
     </section><!--/footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="js/wow.js"></script> 
     <script src="js/main.js"></script>
   </body>
 </html>

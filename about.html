@@ -10,10 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/44ef6350f9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"/>
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body >
-    <section class="hero-about" > 
+    <div class="preloader"></div><!--/preloader-->
+    <section class="hero-about hero-bg" > 
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
         <a  class="col-md-3 mb-2 mb-md-0">
         </a>
@@ -25,7 +27,7 @@
             <li class="nav-item"><a class="nav-link active" aria-current="page">About</a></li>
             <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>  <!--/NAVIGATION-->
-        <div class="col-md-3 text-end mx-3 mt-md-0 mt-5">
+        <div class="col-md-3 text-end mx-3 mt-md-0 mt-5 wow bounceInRight" data-wow-delay="1s">
           <button class="switch" id="switch">
             <span><i class="fa-solid fa-sun"></i></span>
             <span><i class="fa-solid fa-moon"></i></span>
@@ -34,7 +36,7 @@
       </header><!--/header-->
       <div class="px-4 py-5 my-5 text-center border-down">
           <h1 class="display-1 fw-900 text-uppercase px-4 mx-auto">About Me</h1>
-          <div class="col-lg-6 mx-auto mb-5">
+          <div class="col-lg-6 mx-auto mb-5 wow fadeInDown" data-wow-delay=".5s">
             <p class="lead fw-bold my-4">Hip Hop and Breakdance, Skateboarding, Pets in Hats, Video Games, Lattes and fries-Sausages ! :)</p>
           </div> 
       </div>
@@ -43,14 +45,14 @@
       <section class="section-about-me">
         <div class="container px-4 py-5" >        
             <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-5">        
-              <div class="col">
+              <div class="col wow fadeInLeft" data-wow-delay=".6s">
                 <h2 class="display-4 amp border-bottom pb-3 mb-5">The Creative Web Dreamer</h2>
                 <p class="fs-5">An energetic designer who combines rapid prototyping, interaction, motion, and visual design to transform thorny problems into elegant solutions.</p>
                 <p class="fs-5 my-3">The love for design, the interest in technological innovations and the curiosity to learn more and more about the future of the Internet is what makes this not just a job but a great passion for me.</p>
                 <p class="fs-5 my-3">I take advantage of my high creativity and my hustle and bustle looking for innovative solutions for each project, focused on giving the best of me, taking it to the next level with impacts that generate positive emotion in this digital experience.</p>
                 <p class="fs-5">My work has to be a benefit to the reputation and identity of your company, regardless of whether it is small, medium or large. My purpose is to provide them with what they need, guaranteeing quality and professionalism, using your perspective as inspiration, to grow together, since to do it well we have to be a great team.</p>
               </div><!--/.col-->
-              <div class="col">
+              <div class="col wow fadeInRight" data-wow-delay=".6s">
                 <div class="product-card">
                   <div class="product-card__body">
                     <a  class="d-block">
@@ -65,7 +67,7 @@
               </div><!--/.col-->
             </div><!--/row-->
             <div class="row row-cols-1 row-cols-lg-2 align-items-stretch">
-                <div class="col">
+                <div class="col wow fadeIn">
                     <h2 class="display-4 border-bottom pb-3 mb-5 amp">Experience</h2>
                     <div class="container-fluid">
                         <dl class="row">
@@ -121,7 +123,7 @@
                     </div><!--/container-->
 
                 </div><!--/col-->
-                <div class="col">
+                <div class="col fadeIn">
                     <h2 class="display-4 border-bottom pb-3 mb-5 amp">Education</h2>
                     <div class="row row-cols-1 ">
                         <div class="col d-flex align-items-start">
@@ -153,7 +155,7 @@
     <section class="footer">
       <div class="container px-4 py-5" id="contactMe">
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-              <div class="col">
+              <div class="col wow fadeIn" data-wow-delay=".2s">
                 <div class="card rounded-4 shadow">
                   <div class="card-body">
                     <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> LinkedIn</h2>
@@ -163,7 +165,7 @@
                 </div><!--/card--> 
               </div><!--/col-->
   
-              <div class="col">
+              <div class="col wow fadeIn" data-wow-delay=".4s">
                 <div class="card rounded-4 shadow">
                   <div class="card-body">
                     <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> Twitter</h2>
@@ -173,7 +175,7 @@
                 </div><!--/card--> 
               </div><!--/col-->
   
-              <div class="col">
+              <div class="col wow fadeIn" data-wow-delay=".6s">
                 <div class="card rounded-4 shadow">
                   <div class="card-body">
                     <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> Github</h2>
@@ -183,7 +185,7 @@
                 </div><!--/card--> 
               </div><!--/col-->
   
-              <div class="col">
+              <div class="col wow fadeIn" data-wow-delay=".6s">
                 <div class="card rounded-4 shadow">
                   <div class="card-body">
                     <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> Email</h2>
@@ -196,20 +198,21 @@
             </div>
       </div><!-- 5 -->
       <div class="container">
-          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-up">
+          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-up">
             <p class="col-md-4 mb-0 ">© 2022 Creative Web Dreamer, All Rights Reserved</p>
         
         
             <ul class="nav col-md-4 justify-content-end">
-              <li class="nav-item"><a href="index.html" class="nav-link px-2 ">Home</a></li>
+              <li class="nav-item"><a href="index.html"  class="nav-link px-2 ">Home</a></li>
               <li class="nav-item"><a href="work.html" class="nav-link px-2 ">Work</a></li>
-              <li class="nav-item"><a  class="nav-link px-2 ">About</a></li>
+              <li class="nav-item"><a class="nav-link px-2 ">About</a></li>
               <li class="nav-item"><a href="contact.html" class="nav-link px-2 ">Contact</a></li>
             </ul>
           </footer>
       </div><!--/copy-->
     </section><!--/footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="js/wow.js"></script> 
     <script src="js/main.js"></script>
   </body>
 </html>
