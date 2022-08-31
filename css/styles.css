@@ -189,6 +189,7 @@ body.light a:hover, a.link:hover{
 }
 .nav-link {
     color: var(--color-primario);
+    padding: 0.5rem 0.8rem;
 }
 .nav-link:focus, .nav-link:hover{
     color: inherit;
