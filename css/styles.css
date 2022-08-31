@@ -33,7 +33,7 @@ a{
 .color , .fill-color{
     color: var(--color-primario);
 }
-
+html{overflow-x: hidden;}
 body.light .color{
     color: var(--color-light);
 }
@@ -73,8 +73,6 @@ body{
     font-size: 14px;
     transition: all .3s ease;
     color:var(--color-texto);
-
-    overflow-x:hidden;
 }
 
 body.light{
@@ -326,10 +324,15 @@ body.light .card.bordered{
     
  }
  .hero-title{
-    font-size: 7rem;
+    font-size: 3.5rem;
     letter-spacing: -3px;
     line-height: .9;
  }
+ @media (min-width: 768px) { 
+    .hero-title{
+        font-size: 7rem;
+    }
+  }
 /*-------------------------------------------*\
     Estilos Generales
 \*-------------------------------------------*/
@@ -407,3 +410,4 @@ body.light .hero-contact{
 .imagen-preview img{
     max-width: 80%;
 }
+ 
