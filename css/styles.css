@@ -102,6 +102,10 @@ body.light .text-muted{
 /*-------------------------------------------*\
     botones
 \*-------------------------------------------*/
+
+.btn{
+    border-radius: 4px;
+}
 .btn:hover{
     text-decoration: none;
     filter: brightness(.9);
@@ -352,7 +356,6 @@ body.light .card.bordered{
     background-position: center;
     background-attachment: fixed;
     background-blend-mode: screen;
-    backdrop-filter: saturate(0.5);
 }
 body.light .hero{
     background-image: url(../img/hero-bg-light.png);
