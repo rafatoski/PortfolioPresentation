@@ -68,9 +68,9 @@ body.light .carousel-indicators [data-bs-target]{
     Fonts
 \*-------------------------------------------*/
 body{
-    background-color: #323137;
-    font-family: 'lato', sans-serif;
-    font-size: 14px;
+    background-color: #222225;
+    font-family: system-ui, 'Inter', sans-serif;
+    font-size: 16px;
     transition: all .3s ease;
     color:var(--color-texto);
 }
@@ -107,8 +107,7 @@ body.light .text-muted{
     filter: brightness(.9);
 }
 .btn-primary {
-    color: #fff;
-    font-weight: bold;
+    color: #fff; 
     background-color: var(--color-primario);
     border-color: var(--color-primario);
 }
@@ -154,6 +153,7 @@ body.light .btn-outline-primary {
     border-color:var(--color-light);
 }
 body.light .btn-outline-primary:hover {
+    color: wheat;
     background-color:var(--color-light);
     border-color:var(--color-light);
 }

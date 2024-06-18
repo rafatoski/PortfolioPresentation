@@ -1,18 +1,28 @@
+# Portfolio - Rafael Castillo | Product Designer & Front-End Developer
 
-# Portfolio - Rafael Castillo | Product Designer - Fullstack Developer
+Welcome to my portfolio! I am Rafael Castillo, a passionate Product Designer and Front-End Developer with over 7 years of experience in UX design and front-end development. I specialize in creating visually stunning and user-friendly web experiences using CSS, HTML, JavaScript, React, TypeScript, and PHP.
 
-Welcome to my portfolio! I'm a passionate web designer with expertise in CSS, HTML, JavaScript, React, TypeScript, and PHP. Throughout my career, I've worked on a variety of projects, ranging from personal websites to large-scale business applications. My focus is on delivering visually stunning and user-friendly web experiences.
+## About Me
+
+I am dedicated to crafting unique and captivating designs with a focus on aesthetics and usability. My expertise lies in transforming designs into clean, semantic code and enhancing user experiences with dynamic interactivity. I thrive on challenges and am committed to delivering innovative solutions that meet the highest standards of quality and functionality.
 
 ## What I Offer
 
-- **Creative Design:** I specialize in crafting unique and eye-catching designs that captivate users from the get-go. My emphasis on aesthetics and usability ensures that each project is visually impressive and easy to navigate.
+- **Creative Design:** Crafting unique and captivating designs with a focus on aesthetics and usability, ensuring visually impressive and easy-to-navigate interfaces.
   
-- **Frontend Development:** With strong skills in HTML, CSS, JavaScript, React, and TypeScript, I can turn designs into clean and semantic code. I use the latest techniques and frameworks to ensure cross-browser compatibility and mobile optimization.
+- **Front-End Development:** Transforming designs into clean, semantic code with expertise in HTML, CSS, JavaScript, React, and TypeScript. Ensuring cross-browser compatibility and mobile optimization using the latest techniques and frameworks.
   
-- **Dynamic Interactivity:** Leveraging JavaScript's capabilities, I add interactivity and dynamism to my projects. Whether through smooth animations, scroll effects, or advanced functionalities, I ensure that each website offers an engaging and immersive user experience.
+- **Dynamic Interactivity:** Enhancing user experiences with smooth animations, scroll effects, and advanced functionalities through JavaScript. Delivering engaging and immersive web interactions.
 
-## How Can I Help You?
+## Experience
 
-Whether you're looking for a web designer for your next project or need assistance with frontend development, I'm here to help! Get in touch to discuss your ideas and goals, and together we can create something amazing.
+- **Sell2Rent (2023 - 2024):** UX/UI Front-End Developer
+- **Indeed.com (2022 - 2023):** Senior UX/UI Designer
+- **BingeWave (2021 - 2022):** Designer Front-End Developer
+- **Web4Realty (2018 - 2021):** Senior Graphic Web Designer
+
+## Let's Work Together
+
+Whether you need a web designer for your next project or assistance with front-end development, I am here to help. Let's discuss your ideas and create something amazing together.
 
 Thank you for visiting my portfolio!
