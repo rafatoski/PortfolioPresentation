@@ -197,7 +197,6 @@ body.light a:hover, a.link:hover{
 }
 .nav-link:focus, .nav-link:hover{
     color: inherit;
-    font-weight: bold;
 }
 body.light .nav-pills .nav-link.active {
     color: black;
