@@ -4,6 +4,12 @@
   ],
   "hints": {
     "disown-opener": "off",
-    "axe/name-role-value": "off"
+    "axe/name-role-value": "off",
+    "axe/structure": [
+      "default",
+      {
+        "definition-list": "off"
+      }
+    ]
   }
 }
