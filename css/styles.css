@@ -387,18 +387,23 @@ body.light .footer{
 }
 .hero-work{
     background-image: url(../img/bg-dark-expousure-1.jpg);
+    background-size: cover;
 }
 body.light .hero-work{
     background-image: url(../img/bg-expousure-3.jpg);
+    background-size: cover;
 }
 .hero-about{
     background-image: url(../img/bg-dark-expousure-2.jpg);
+    background-size: cover;
 }
 body.light .hero-about{
     background-image: url(../img/bg-expousure-2.jpg);
+    background-size: cover;
 }
 .hero-contact{
     background-image: url(../img/bg-dark-expousure-3.jpg);
+    background-size: cover;
 }
 body.light .hero-contact{
     background-image: url(../img/bg-expousure-1.jpg);
