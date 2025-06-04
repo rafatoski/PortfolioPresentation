@@ -304,7 +304,7 @@ body.light .nav-link {
 .card{
     background-color:rgb(33,37,41);
     border: none;
-     
+    min-height: 250px;
 }
 .card.bordered{
     border: 1px solid #111;
