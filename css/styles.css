@@ -328,13 +328,13 @@ body.light .card.bordered{
     
  }
  .hero-title{
-    font-size: 3.5rem;
+    font-size: 3rem;
     letter-spacing: -3px;
     line-height: .9;
  }
  @media (min-width: 768px) { 
     .hero-title{
-        font-size: 7rem;
+        font-size: 6rem;
     }
   }
 /*-------------------------------------------*\
@@ -355,6 +355,10 @@ body.light .card.bordered{
     background-position: center;
     background-attachment: fixed;
     background-blend-mode: screen;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 body.light .hero{
     background-image: url(../img/hero-bg-light.png);

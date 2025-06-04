@@ -15,7 +15,7 @@
   </head>
   <body>
     <div class="preloader"></div><!--/preloader-->
-    <section class="hero" > 
+    <section class="hero overflow-hidden" style="height: 100vh;"> 
       <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
         <a  class="col-md-3 mb-2 mb-md-0">
         </a>
@@ -35,15 +35,18 @@
         </div><!--Ligth mode triger-->
       </header><!--/header-->
       <div class="px-4 mb-5 text-center border-down">
-        <div class="hero-container wow fadeIn" data-wow-delay=".3s">
+        <div class="hero-container wow fadeIn mb-5" data-wow-delay=".3s">
           <img src="./img/AIprofilePhoto.jpg" alt="Profile" width="80px" height="80px" class="rounded-circle shadow">
             <h2 class="lead amp mt-2">Welcome, I'm  Rafael Castillo</h2>
-            <h1 class="display-2 fw-900 text-uppercase px-4 mx-auto hero-title">Creative Web Dreamer</h1>
+            <h1 class="fw-bold text-uppercase px-4 mx-auto hero-title">Creative Web <span class="fw-900 d-block">Dreamer</span></h1>
+            <h4 class="px-2 mx-auto amp">Helping visionary founders turn their product into their best seller.</h4>
             <div class="col-lg-6 mx-auto">
-              <p class="mb-5 fs-5 pb-5">I <span class="color amp fw-normal">design &amp; build</span>  custom digital products that not only look great but also turn visitors into customers, driving more sales and leads.</p>               
+              <p class="fs-5 ">I  <span class="amp color">design & build </span>custom digital products that not only look great but also turn visitors into customers, driving more sales and leads.</p>               
+              <a href="https://calendly.com/rafaelcastilloac89/30min" target="_blank" class="btn btn-primary btn-lg">Let's talk → Book a 30-min consult</a>
             </div><!---->
+
         </div><!--/.hero-container-->
-        <div class="overflow-hidden" style="max-height: 40vh;">
+        <div class="overflow-hidden mt-5" >
             <div class="container px-lg-5">
               <div id="carouselHero" class="carousel slide carousel-fade wow fadeInUp" data-bs-ride="carousel"  data-wow-delay=".5s">
                 <div class="carousel-inner">
@@ -74,23 +77,37 @@
         <div class="container px-4 py-5" id="whatIdo">
             <h2 class="amp pb-2 border-down wow fadeIn" >What I Do</h2>
         
-            <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-5">
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-3 py-5">
               <div class="col wow fadeInUp" data-wow-delay=".3s">
                 <div class="card h-100 overflow-hidden rounded-4 shadow" >
                   <div class="d-flex flex-column h-100 p-5 pb-3  text-shadow-1">
-                    <h2 class="pt-md-5 mt-md-5 mb-4 display-6 lh-1 fw-bold">Graphic and Visual Design <span class="color">UI/UX</span> for Products</h2>
-                    <p>I craft compelling visual strategies that make your product or brand stand out online. By focusing on human-centered design, I creatively conceptualize interfaces and interactions, transforming them into functional websites and applications optimized for all screen sizes. Additionally, I create high-quality images in various resolutions to enhance your online presence.</p>
+                    <h2 class="pt-md-5 mt-md-5 mb-4  lh-1 fw-bold amp"><span class="color">Design</span> that Connects & Converts</h2>
+                    <p>I craft human-centered UI/UX experiences that are both beautiful and strategic. From intuitive interfaces to responsive layouts and visual storytelling, I create designs that build trust, communicate clearly and drive action. I also deliver high-quality assets across formats and devices to ensure a cohesive visual identity.</p>
+                    <p class="text-sm"> <span class="fw-bold">Tools & Skills:</span> Figma, Design Systems, Prototyping, A/B Testing, Accessibility (WCAG), Responsive UI</p>
+
                   </div>
                 </div>
-              </div>
+              </div><!-- /col-->
               <div class="col wow fadeInUp" data-wow-delay=".6s">
                 <div class="card  h-100 overflow-hidden  rounded-4 shadow" >
                   <div class="d-flex flex-column h-100 p-5 pb-3  text-shadow-1">
-                    <h2 class="pt-md-5 mt-md-5 mb-4 display-6 lh-1 fw-bold">Full-Stack <span class="color">Scalable</span>  Solutions Development</h2>
-                    <p>I design and develop all kinds of web platforms and applications using the most robust, modern, and clean coding practices. My goal is to ensure meaningful user interactions that drive conversions and achieve desired outcomes. I strive to turn users into customers by improving user experience with minimal effort and maximum results.</p>
+                    <h2 class="pt-md-5 mt-md-5 mb-4  lh-1 fw-bold amp">Scalable <span class="color">Front-End</span> Development</h2>
+                    <p>I develop high-performance, accessible websites and apps using modern frameworks and clean code practices.
+With a focus on scalability and maintainability, I build digital products that load fast, work everywhere, and are easy to evolve. Every interaction is optimized for user flow and conversion.</p>
+                    <p class="text-sm"> <span class="fw-bold">Tools & Skills:</span> HTML, CSS, JavaScript, React, Vue 3, Tailwind, Vuetify, Git, GitHub Actions, WordPress, PHP</p>
                   </div>
                 </div>
-              </div>
+              </div><!-- /col-->
+              <div class="col wow fadeInUp" data-wow-delay=".6s">
+                <div class="card  h-100 overflow-hidden  rounded-4 shadow" >
+                  <div class="d-flex flex-column h-100 p-5 pb-3  text-shadow-1">
+                    <h2 class="pt-md-5 mt-md-5 mb-4  lh-1 fw-bold amp">AI-Driven <span class="color">Marketing</span>  Strategy</h2>
+                    <p>I implement marketing strategies powered by automation and AI.
+From setting up smart workflows with n8n to deploying custom GPT agents that improve lead generation and client onboarding, I bring efficiency and intelligence to your marketing stack.</p>
+                    <p class="text-sm"> <span class="fw-bold">Tools & Skills:</span> n8n, GPT agents, OpenAI API, Webhooks, CRM integrations, Conversion Funnels</p>
+                  </div>
+                </div>
+              </div><!-- /col-->
         
             </div>
         </div><!-- 1 -->
@@ -98,7 +115,7 @@
             <h2 class="amp pb-2 border-down wow fadeIn" >Why Hire Me?</h2>
             <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
               <div class="col wow fadeInUp"> 
-                <p class="fs-5 lh-base">With over 8 years of remote working experience across diverse industries, I bring versatility, professionalism, and the ability to quickly adapt to any sector and platform. My mission is to optimize your online brand, ensuring it remains at the cutting edge, all while delivering high-quality results that exceed expectations at a competitive cost.</p>
+                <p class="fs-5 lh-base">With over 8 years of remote experience across diverse industries, I bring versatility, professionalism, and the agility to adapt to any platform or sector. My mission is to elevate your online brand and keep it on the cutting edge — delivering high-quality results that exceed expectations, at a competitive cost.</p>
                 <a href="work.html" class="btn btn-primary">View My Work </a>
               </div>
               <div class="feature col wow fadeInUp">
@@ -179,12 +196,12 @@
                       <div class="card bordered mb-3 p-3 w-100">
                          <div class="row g-0 d-flex align-items-center px-3">
                            <div class="col-md-3">
-                             <img src="img/user-emily.png" class="img-fluid rounded-circle" alt="Emily" width="120">
+                             <img src="img/user-sandro.png" class="img-fluid rounded-circle" alt="Emily" width="120">
                            </div>
                            <div class="col-md-9">
                              <div class="card-body text-md-start">
-                               <h5 class="card-title fw-bold">Emily Thompson</h5>
-                               <p class="card-text mb-0"><small class="text-muted">CEO at TechVisions Inc.</small></p>
+                               <h5 class="card-title fw-bold">Sandro Alarcón</h5>
+                               <p class="card-text mb-0"><small class="text-muted">CEO at Travelkit</small></p>
                                <p class="card-text">Rafa is a reliable professional who delivers exceptional results and brings a collaborative spirit to every project.</p>
                              </div>
                            </div>
@@ -235,13 +252,13 @@
                 <div class="product-card">
                   <div class="product-card__body">
                     <a  class="d-block">
-                      <img src="img/DEMO-stonedeals.png" class="img-fluid" alt="StoneDeals">
+                      <img src="img/DEMO-travelkit.png" class="img-fluid" alt="Travelkit">
                     </a>
-                    <a href="http://www.stonedeal.com/" target="_blank" class="product-card__body__overlay btn btn-primary btn-sm"><i class="fa-solid fa-link"></i> View Website</a>
+                    <a href="https://web.travelkit.us/" target="_blank" class="product-card__body__overlay btn btn-primary btn-sm"><i class="fa-solid fa-link"></i> View Website</a>
                   </div><!--/.product-card-body-->
                   <div class="product-card__footer">
-                    <p class="product-card__footer__name">StoneDeals - eCommerce</p>
-                    <p class="product-card__footer__info"> Designer UI/UX</p>
+                    <p class="product-card__footer__name">TravelKit - eCommerce</p>
+                    <p class="product-card__footer__info"> Product Designer UI/UX front-end Developer</p>
                   </div><!--/.product-card-footer-->
                 </div><!--./product-card-->
               </div><!--/.col-->
@@ -250,13 +267,13 @@
                 <div class="product-card">
                   <div class="product-card__body">
                     <a class="d-block">
-                      <img src="img/DEMO-elliotwave.png" class="img-fluid" alt="Elliot Wave Forecast">
+                      <img src="img/DEMO-heraldos.png" class="img-fluid" alt="Elliot Wave Forecast">
                     </a>
-                    <a href="https://elliottwave-forecast.com/" target="_blank" class="product-card__body__overlay btn btn-primary btn-sm"><i class="fa-solid fa-link"></i> View Website</a>
+                    <a href="https://heraldosmexico.org/" target="_blank" class="product-card__body__overlay btn btn-primary btn-sm"><i class="fa-solid fa-link"></i> View Website</a>
                   </div><!--/.product-card-body-->
                   <div class="product-card__footer">
-                    <p class="product-card__footer__name">Elliot Wave ForeCast  - Website</p>
-                    <p class="product-card__footer__info"> Designer UI/UX</p>
+                    <p class="product-card__footer__name">Heraldos del Evangelio - Custom WordPress</p>
+                    <p class="product-card__footer__info">Designer/Developer Marketing strategist</p>
                   </div><!--/.product-card-footer-->
                 </div><!--./product-card-->
               </div><!--/.col-->
@@ -273,14 +290,15 @@
                     <div class="card border" style="max-width: 100%; margin:auto;">
                       <div class="row g-0">
                         <div class="col-md-4">
-                          <img src="./img/AIprofilePhoto.jpg" class="img-fluid rounded-start" alt="Profile Foto">
+                          <img src="./img/AIprofilePhoto2.png" class="img-fluid rounded-start" alt="Profile Foto">
                         </div>
                         <div class="col-md-8">
                           <div class="card-body align-items-center">
                             <h5 class="card-title my-3">Rafael Castillo | <small class="lead color">Product Designer &amp; Front-End Developer</small></h5>
-                            <p class="card-text">I'm a seasoned Product Designer and Fullstack Developer with over 8 years of experience. I've experience leding design teams and history with major startups like Indeed.com and specialize in creating user-centric web applications.</p>
-                            <p class="card-text">Whether it's designing a user interface or developing a responsive web application, I am committed to delivering high-quality results that exceed expectations.</p>
-                            <p class="card-text">I specialize in crafting digital experiences that not only look stunning but also drive user engagement and conversion. </p>
+                            <p class="card-text">I started my creative journey over 8 years ago, diving into the world of motion graphics and visual design. That foundation evolved into a deep passion for building intuitive, high-converting digital experiences — blending creativity with code.</p>
+                            <p class="card-text">Over the years, I've worked remotely with startups and companies across the U.S., Canada, and London, helping them scale their products with design systems, user-centered thinking, and solid front-end development.</p>
+                            <p class="card-text">I've led design teams, shaped product strategies, and built tools that not only look great — but perform with purpose. I thrive on metrics, love hitting goals, and bring a collaborative spirit to every project.</p>
+                            <p class="crd-text">If you're looking for someone who blends design vision, technical execution, and strategic thinking — let's talk.</p>
                             <a href="https://calendly.com/rafaelcastilloac89/30min" target="_blank"  class="btn btn-outline-primary btn-sm"><small class="text-body-secondary"><i class="fa fa-calendar"></i> Lets shedule a meeting</small></a>
                           </div>
                         </div>
@@ -296,32 +314,32 @@
     <section class="footer">
       <div class="container px-4 py-5" id="contactMe">
             <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-              <div class="col wow fadeIn" data-wow-delay=".2s">
+              <div class="col wow fadeIn h-100" data-wow-delay=".2s">
                 <div class="card rounded-4 shadow">
                   <div class="card-body">
                     <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> LinkedIn</h2>
-                    <p class="card-text">This is my main professional social network. We can connect as a company and employee, see more information about my jobs and experience as well as my certificates.</p>
-                    <a href="https://co.linkedin.com/in/rafaelcastillocreative" class="btn btn-primary" target="_blank"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+                    <p class="card-text">Let's connect professionally! Explore my full career path, certifications, and projects. Whether you're hiring or just networking, my profile has everything you need to know.</p>
+                    <a href="https://co.linkedin.com/in/rafaelcastillocreative" class="btn btn-primary" target="_blank"><i class="fa-brands fa-linkedin"></i> Connect on Linkedin</a>
                   </div><!--/card body -->
                 </div><!--/card--> 
               </div><!--/col--> 
   
-              <div class="col wow fadeIn" data-wow-delay=".6s">
+              <div class="col wow fadeIn h-100" data-wow-delay=".6s">
                 <div class="card rounded-4 shadow">
                   <div class="card-body">
                     <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> Github</h2>
-                    <p class="card-text">Want to know what technologies, tools. processes, and websites I use? You can dinf all of those repositories right here.</p>
-                    <a href="https://github.com/rafatoski" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github-alt"></i> Repositories</a>
+                    <p class="card-text">Curious about my code, tools, and workflows? Discover the repositories behind my web apps, design systems, and experiments. Everything I build lives here.</p>
+                    <a href="https://github.com/rafatoski" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github-alt"></i>  Explore Repos</a>
                   </div><!--/card body -->
                 </div><!--/card--> 
               </div><!--/col-->
   
-              <div class="col wow fadeIn" data-wow-delay=".6s">
+              <div class="col wow fadeIn h-100" data-wow-delay=".6s">
                 <div class="card rounded-4 shadow">
                   <div class="card-body">
                     <h2 class="pt-5 mb-4 display-6 lh-1 fw-bold"> Email</h2>
-                    <p class="card-text">If you want to advertise your business or a particular product, need assistance, or have a creative concept, contact me so that together we can make your users' experience better.</p>
-                    
+                    <p class="card-text">Got an idea, project, or challenge? Whether you're growing a business, launching a product, or need design + tech firepower — let's build something powerful together.</p>
+                    <a href="mailto:rafaelcastilloac89@gmail.com" target="_blank" class="btn btn-primary"><i class="fa fa-envelope"></i>  Send me an email</a>
                   </div><!--/card body -->
                 </div><!--/card--> 
               </div>
@@ -330,7 +348,7 @@
       </div><!-- 5 -->
       <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 border-up">
-          <p class="col-md-4 mb-0 ">© 2016 - 2024 Creative Web Dreamer.</p>
+          <p class="col-md-4 mb-0 ">© 2016 - 2025 Creative Web Dreamer.</p>
       
       
           <ul class="nav col-md-4 justify-content-end">
