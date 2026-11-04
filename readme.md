@@ -1,28 +1,35 @@
-# Portfolio - Rafael Castillo | Product Designer & Front-End Developer
+# Rafael Castillo
 
-Welcome to my portfolio! I am Rafael Castillo, a passionate Product Designer and Front-End Developer with over 7 years of experience in UX design and front-end development. I specialize in creating visually stunning and user-friendly web experiences using CSS, HTML, JavaScript, React, TypeScript, and PHP.
+AI Engineer building intelligent digital products, agentic workflows, and business automation.
 
-## About Me
+I combine AI engineering, full-stack development, and product design to turn complex ideas into useful, reliable, and human-centered software. My background in UX and front-end engineering helps me approach AI products as complete systems: from workflow architecture and API integrations to interface design and user experience.
 
-I am dedicated to crafting unique and captivating designs with a focus on aesthetics and usability. My expertise lies in transforming designs into clean, semantic code and enhancing user experiences with dynamic interactivity. I thrive on challenges and am committed to delivering innovative solutions that meet the highest standards of quality and functionality.
+## Focus
 
-## What I Offer
+- AI agents and workflow automation
+- OpenAI API integrations
+- Intelligent lead generation and client onboarding systems
+- CRM, webhook, and third-party API integrations
+- AI-powered web products and internal tools
+- Product strategy, prototyping, and scalable user experiences
 
-- **Creative Design:** Crafting unique and captivating designs with a focus on aesthetics and usability, ensuring visually impressive and easy-to-navigate interfaces.
-  
-- **Front-End Development:** Transforming designs into clean, semantic code with expertise in HTML, CSS, JavaScript, React, and TypeScript. Ensuring cross-browser compatibility and mobile optimization using the latest techniques and frameworks.
-  
-- **Dynamic Interactivity:** Enhancing user experiences with smooth animations, scroll effects, and advanced functionalities through JavaScript. Delivering engaging and immersive web interactions.
+## Core technologies
 
-## Experience
+`OpenAI API` `n8n` `JavaScript` `TypeScript` `React` `Vue` `HTML` `CSS` `PHP` `GitHub Actions` `Figma`
 
-- **Sell2Rent (2023 - 2024):** UX/UI Front-End Developer
-- **Indeed.com (2022 - 2023):** Senior UX/UI Designer
-- **BingeWave (2021 - 2022):** Designer Front-End Developer
-- **Web4Realty (2018 - 2021):** Senior Graphic Web Designer
+## This portfolio
 
-## Let's Work Together
+A curated selection of my work across AI, product design, automation, and web development. The site is built with semantic HTML, CSS, JavaScript, and Bootstrap, with responsive layouts, motion, and light/dark themes.
 
-Whether you need a web designer for your next project or assistance with front-end development, I am here to help. Let's discuss your ideas and create something amazing together.
+## Background
 
-Thank you for visiting my portfolio!
+My career spans product design, UX/UI, front-end development, and full-stack delivery. I have worked with remote, cross-functional teams in technology, real estate, marketing, and digital products. Today, I apply that experience to designing and engineering practical AI systems that improve how teams operate and how customers interact with software.
+
+## Contact
+
+- [LinkedIn](https://co.linkedin.com/in/rafaelcastillocreative)
+- [GitHub](https://github.com/rafatoski)
+- [Email](mailto:rafaelcastilloac89@gmail.com)
+- [Book a conversation](https://calendly.com/rafaelcastilloac89/30min)
+
+Open to AI engineering roles, product collaborations, and applied AI projects.

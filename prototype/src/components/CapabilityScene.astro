@@ -1,0 +1,135 @@
+---
+import { Bot, Check, GitBranch, LoaderCircle, MousePointer2, Send, Settings2, Webhook } from '@lucide/astro';
+
+interface Props {
+  kind: 'design' | 'dev' | 'ai';
+}
+
+const { kind } = Astro.props;
+
+// Markup below is the finished (static) state; site.ts animates from a reset state when motion is allowed.
+const nodes = [
+  { name: 'Trigger', detail: 'New lead', Icon: Webhook, cell: 'col-start-1 row-start-1' },
+  { name: 'AI Agent', detail: 'Classify intent', Icon: Bot, cell: 'col-start-3 row-start-1' },
+  { name: 'Processing', detail: 'Enrich data', Icon: Settings2, cell: 'col-start-3 row-start-3' },
+  { name: 'Output', detail: 'Send to CRM', Icon: Send, cell: 'col-start-1 row-start-3' },
+];
+
+const chrome = 'flex h-8 shrink-0 items-center gap-1.5 border-b border-white/6 px-3';
+const dot = 'size-1.5 rounded-full bg-white/15';
+---
+
+<div class="scene relative h-56 overflow-hidden rounded-2xl border border-white/8 bg-night/70 select-none" data-scene={kind} aria-hidden="true">
+  {kind === 'design' && (
+    <>
+      <div class={chrome}>
+        <span class={dot}></span><span class={dot}></span><span class={dot}></span>
+        <span class="ml-2 text-[10px] font-medium text-muted">landing.fig</span>
+        <span class="ml-auto rounded-md bg-white/5 px-1.5 py-0.5 font-mono text-[9px] text-muted">100%</span>
+      </div>
+      <div class="absolute inset-x-0 top-8 bottom-0 flex">
+        <div class="scene-grid relative flex-1 p-3">
+          <div class="flex h-full flex-col rounded-xl border border-white/10 bg-panel-soft p-3" data-d-frame>
+            <div class="h-[3.25rem] rounded-lg bg-gradient-to-br from-violet/45 via-violet/15 to-accent/20" data-d-media></div>
+            <div class="mt-2.5 h-1.5 w-3/4 origin-left rounded-full bg-white/30" data-d-line></div>
+            <div class="mt-1.5 h-1.5 w-1/2 origin-left rounded-full bg-white/12" data-d-line></div>
+            <div class="relative mt-auto w-fit">
+              <div class="rounded-[14px] border border-accent bg-accent px-3 py-1.5 text-[10px] leading-none font-semibold text-night" data-d-button>Get started</div>
+              <div class="pointer-events-none absolute -inset-1 rounded-[4px] border border-accent" data-d-select>
+                <span class="absolute -top-[3px] -left-[3px] size-1.5 border border-accent bg-night"></span>
+                <span class="absolute -top-[3px] -right-[3px] size-1.5 border border-accent bg-night"></span>
+                <span class="absolute -bottom-[3px] -left-[3px] size-1.5 border border-accent bg-night"></span>
+                <span class="absolute -right-[3px] -bottom-[3px] size-1.5 border border-accent bg-night"></span>
+              </div>
+              <span class="absolute top-1/2 left-full ml-2.5 -translate-y-1/2 rounded bg-accent px-1 py-px font-mono text-[8px] leading-tight font-semibold whitespace-nowrap text-night" data-d-size>96 × 28</span>
+            </div>
+          </div>
+        </div>
+        <div class="w-[4.75rem] shrink-0 border-l border-white/6 p-2.5">
+          <p class="text-[9px] font-semibold tracking-[0.12em] text-muted uppercase">Fill</p>
+          <div class="mt-2 grid grid-cols-2 gap-1.5">
+            <span class="relative size-5 rounded-md bg-accent" data-d-swatch>
+              <span class="absolute -inset-[3px] rounded-[8px] border border-ink/70" data-d-ring></span>
+            </span>
+            <span class="size-5 rounded-md bg-violet"></span>
+            <span class="size-5 rounded-md bg-ink/85"></span>
+            <span class="size-5 rounded-md border border-white/10 bg-panel"></span>
+          </div>
+          <p class="mt-4 text-[9px] font-semibold tracking-[0.12em] text-muted uppercase">Radius</p>
+          <div class="relative mt-2.5 h-1 rounded-full bg-white/10">
+            <div class="absolute inset-y-0 left-0 w-[80%] rounded-full bg-accent/70" data-d-radius></div>
+            <span class="absolute top-1/2 left-[80%] size-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full border border-night bg-ink" data-d-knob></span>
+          </div>
+          <p class="mt-2 font-mono text-[9px] text-ink/80" data-d-radius-value>14</p>
+        </div>
+      </div>
+      <span class="absolute top-[78%] left-[44%] text-ink drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)]" data-d-cursor>
+        <MousePointer2 size={16} fill="currentColor" stroke="#00020f" stroke-width={1.5} />
+      </span>
+    </>
+  )}
+
+  {kind === 'dev' && (
+    <>
+      <div class={chrome}>
+        <span class={dot}></span><span class={dot}></span><span class={dot}></span>
+        <span class="ml-2 rounded-md border border-white/8 bg-white/5 px-1.5 py-0.5 font-mono text-[9px] text-ink/80">Hero.astro</span>
+        <span class="ml-auto flex items-center gap-1 font-mono text-[9px] text-muted"><GitBranch size={10} stroke-width={2} />main</span>
+      </div>
+      <div class="absolute inset-x-0 top-8 bottom-8 overflow-hidden px-3 py-2.5 font-mono text-[10px] leading-[1.6rem] whitespace-pre" data-v-code>
+        <div data-v-line><span class="mr-3 text-white/20">1</span><span class="text-violet">const</span><span class="text-ink"> title = </span><span class="text-accent">'AI Product'</span><span class="text-muted">;</span></div>
+        <div data-v-line><span class="mr-3 text-white/20">2</span><span class="text-muted">&lt;</span><span class="text-violet">section</span><span class="text-ink"> class=</span><span class="text-accent">"hero"</span><span class="text-muted">&gt;</span></div>
+        <div data-v-line><span class="mr-3 text-white/20">3</span><span class="text-muted">  &lt;</span><span class="text-violet">h1</span><span class="text-muted">&gt;</span><span class="text-ink">{'{title}'}</span><span class="text-muted">&lt;/</span><span class="text-violet">h1</span><span class="text-muted">&gt;</span></div>
+        <div data-v-line><span class="mr-3 text-white/20">4</span><span class="text-muted">  &lt;</span><span class="text-violet">Button</span><span class="text-ink"> cta</span><span class="text-muted"> /&gt;</span></div>
+        <div data-v-line><span class="mr-3 text-white/20">5</span><span class="text-muted">&lt;/</span><span class="text-violet">section</span><span class="text-muted">&gt;</span><span class="ml-px inline-block h-3 w-[1.5px] translate-y-0.5 bg-accent" data-v-caret></span></div>
+      </div>
+      <div class="absolute right-3 bottom-11 w-[42%] min-w-[6.5rem] rounded-lg border border-white/10 bg-panel-soft p-2 shadow-[0_12px_30px_rgba(0,2,15,0.55)]" data-v-preview>
+        <p class="flex items-center gap-1 font-mono text-[8px] text-muted"><span class="size-1 rounded-full bg-accent"></span>localhost:4321</p>
+        <div class="mt-2 h-1.5 w-4/5 rounded-full bg-white/35"></div>
+        <div class="mt-1 h-1 w-3/5 rounded-full bg-white/12"></div>
+        <div class="mt-2 h-3 w-10 rounded-full bg-accent"></div>
+      </div>
+      <div class="absolute inset-x-0 bottom-0 h-8 border-t border-white/6 bg-night/60">
+        <div class="absolute inset-x-0 top-0 h-px origin-left bg-accent/70" data-v-progress></div>
+        <div class="flex h-full items-center justify-between px-3 font-mono text-[9px]">
+          <span class="grid">
+            <span class="flex items-center gap-1.5 text-muted opacity-0 [grid-area:1/1]" data-v-state="build"><LoaderCircle class="text-accent" size={11} stroke-width={2} data-v-spinner />Building…</span>
+            <span class="flex items-center gap-1.5 text-accent [grid-area:1/1]" data-v-state="done"><Check size={11} stroke-width={2.4} />Build complete</span>
+          </span>
+          <span class="text-muted tabular-nums" data-v-time>0.84s</span>
+        </div>
+      </div>
+    </>
+  )}
+
+  {kind === 'ai' && (
+    <>
+      <div class={chrome}>
+        <span class={dot}></span><span class={dot}></span><span class={dot}></span>
+        <span class="ml-2 text-[10px] font-medium text-muted">lead-routing</span>
+        <span class="ml-auto grid text-[9px] font-semibold">
+          <span class="flex items-center gap-1 rounded-full bg-accent/10 px-1.5 py-0.5 text-accent opacity-0 [grid-area:1/1]" data-a-head="run"><span class="size-1 rounded-full bg-accent"></span>Running</span>
+          <span class="flex items-center gap-1 rounded-full bg-white/5 px-1.5 py-0.5 text-ink/80 [grid-area:1/1]" data-a-head="done"><Check size={9} stroke-width={3} />Completed</span>
+        </span>
+      </div>
+      <div class="scene-grid absolute inset-x-0 top-8 bottom-0 grid grid-cols-[1fr_1.25rem_1fr] grid-rows-[1fr_1.1rem_1fr] p-3">
+        {nodes.map(({ name, detail, Icon, cell }) => (
+          <div class:list={['flex min-w-0 flex-col justify-between rounded-xl border border-white/10 bg-panel-soft p-2', cell]} data-a-node>
+            <div class="flex min-w-0 items-center gap-1.5">
+              <span class="grid size-6 shrink-0 place-items-center rounded-md border border-white/8 bg-white/5 text-accent"><Icon size={12} stroke-width={2} /></span>
+              <span class="min-w-0"><span class="block truncate text-[10px] leading-tight font-semibold text-ink">{name}</span><span class="block truncate text-[9px] leading-tight text-muted">{detail}</span></span>
+            </div>
+            <span class="grid text-[9px] font-medium">
+              <span class="flex items-center gap-1 text-muted opacity-0 [grid-area:1/1]" data-a-state="idle"><span class="size-1.5 rounded-full bg-white/20"></span>Idle</span>
+              <span class="flex items-center gap-1 text-accent opacity-0 [grid-area:1/1]" data-a-state="run"><span class="size-1.5 rounded-full bg-accent" data-a-pulse></span>Running</span>
+              <span class="flex items-center gap-1 text-ink/80 [grid-area:1/1]" data-a-state="done"><Check class="text-accent" size={10} stroke-width={3} />Done</span>
+            </span>
+          </div>
+        ))}
+        <div class="relative col-start-2 row-start-1 h-px self-center bg-white/12"><div class="absolute inset-0 origin-left bg-accent" data-a-link></div></div>
+        <div class="relative col-start-3 row-start-2 w-px justify-self-center bg-white/12"><div class="absolute inset-0 origin-top bg-accent" data-a-link></div></div>
+        <div class="relative col-start-2 row-start-3 h-px self-center bg-white/12"><div class="absolute inset-0 origin-right bg-accent" data-a-link></div></div>
+      </div>
+    </>
+  )}
+</div>

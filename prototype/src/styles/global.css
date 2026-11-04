@@ -1,0 +1,260 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "DM Sans", ui-sans-serif, sans-serif;
+  --color-ink: #f7f8fb;
+  --color-muted: #a9acb8;
+  --color-night: #00020f;
+  --color-panel: #111421;
+  --color-panel-soft: #171a29;
+  --color-line: #343746;
+  --color-accent: #00ff97;
+  --color-accent-dark: #002c21;
+  --color-violet: #8758d8;
+}
+
+:root {
+  color-scheme: dark;
+  --header-height: 5rem;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-card: 0 24px 70px rgba(0, 2, 15, 0.28);
+  --shadow-card-hover: 0 28px 80px rgba(0, 2, 15, 0.42);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+  background: #00020f;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 50% 6%, rgba(0, 255, 151, 0.1), transparent 25rem),
+    radial-gradient(circle at 8% 42%, rgba(74, 62, 176, 0.11), transparent 28rem),
+    #00020f;
+  color: #f7f8fb;
+  font-family: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 64px 64px;
+  content: "";
+  mask-image: linear-gradient(to bottom, black, transparent 72%);
+  pointer-events: none;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-underline-offset: 0.2em;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+::selection {
+  background: #00ff97;
+  color: #00020f;
+}
+
+:focus-visible {
+  outline: 2px solid #00ff97;
+  outline-offset: 3px;
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 8vw, 5.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5.1vw, 3.45rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.section-shell {
+  padding-block: clamp(5rem, 9vw, 8rem);
+}
+
+.surface-card {
+  box-shadow: var(--shadow-card);
+  transition:
+    border-color 240ms var(--ease-out),
+    box-shadow 300ms var(--ease-out),
+    transform 300ms var(--ease-out),
+    background-color 240ms var(--ease-out);
+}
+
+/* Subtle anamorphic lens flare: hotspot, horizontal streak, halo and a mirrored ghost. */
+@layer components {
+  .surface-card {
+    position: relative;
+  }
+}
+
+.surface-card::after,
+.flare::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at var(--mx, 88%) var(--my, 0%), rgba(255, 255, 255, 0.16), transparent 7%),
+    radial-gradient(55% 1.1% at var(--mx, 88%) var(--my, 0%), rgba(220, 235, 255, 0.28), transparent),
+    radial-gradient(circle at var(--mx, 88%) var(--my, 0%), rgba(0, 255, 151, 0.07), transparent 38%),
+    radial-gradient(circle at calc(100% - var(--mx, 88%)) calc(100% - var(--my, 0%)), rgba(135, 88, 216, 0.09), transparent 9%);
+  content: "";
+  mix-blend-mode: screen;
+  opacity: 0.45;
+  pointer-events: none;
+  transition: opacity 400ms var(--ease-out);
+}
+
+.surface-card:hover::after,
+.flare:hover::after {
+  opacity: 1;
+}
+
+.surface-card:hover {
+  border-color: rgba(0, 255, 151, 0.46);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+}
+
+.interactive-link {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms var(--ease-out);
+}
+
+.interactive-link:active {
+  transform: scale(0.98);
+}
+
+.scene-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* Desktop: the three capabilities share one card, so columns don't lift individually. */
+@media (min-width: 1024px) {
+  .capabilities > .surface-card {
+    box-shadow: none;
+  }
+
+  .capabilities > .surface-card:hover {
+    border-color: var(--color-line);
+    background-color: rgba(255, 255, 255, 0.015);
+    box-shadow: none;
+    transform: none;
+  }
+}
+
+.section-divider {
+  position: relative;
+}
+
+.section-divider::before {
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 151, 0.18), rgba(255, 255, 255, 0.08), transparent);
+  content: "";
+}
+
+.site-header {
+  transition:
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    backdrop-filter 220ms ease;
+}
+
+.mobile-menu {
+  width: 100%;
+  max-width: none;
+  height: 100vh;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background:
+    radial-gradient(circle at 85% 0%, rgba(0, 255, 151, 0.12), transparent 22rem),
+    radial-gradient(circle at 0% 100%, rgba(135, 88, 216, 0.14), transparent 24rem),
+    #00020f;
+  color: #f7f8fb;
+}
+
+.mobile-menu::backdrop {
+  background: transparent;
+}
+
+html.menu-open,
+html.menu-open body {
+  overflow: hidden;
+}
+
+.site-header.is-scrolled {
+  border-color: rgba(255, 255, 255, 0.12);
+  background-color: rgba(0, 2, 15, 0.86);
+  box-shadow: 0 12px 40px rgba(0, 2, 15, 0.3);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+}
+
+@media (max-width: 639px) {
+  :root {
+    --header-height: 4.5rem;
+  }
+
+  html {
+    scroll-padding-top: 78px;
+  }
+
+  .section-shell {
+    padding-block: 4.75rem;
+  }
+
+  .surface-card:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

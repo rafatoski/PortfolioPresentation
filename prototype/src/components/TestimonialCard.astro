@@ -1,0 +1,24 @@
+---
+import { Quote } from '@lucide/astro';
+
+interface Props {
+  quote: string;
+  name: string;
+  role: string;
+  image: string;
+  featured?: boolean;
+}
+
+const { quote, name, role, image, featured = false } = Astro.props;
+---
+
+<figure class:list={["surface-card flex h-full flex-col justify-between rounded-2xl border border-line bg-panel p-6 sm:p-8", featured && "md:col-span-2"]}>
+  <div>
+    <Quote class="mb-5 text-accent/70" size={28} stroke-width={1.6} aria-hidden="true" />
+    <blockquote class:list={["leading-7 text-ink/85", featured ? "text-lg sm:text-xl" : "text-base"]}>{quote}</blockquote>
+  </div>
+  <figcaption class="mt-8 flex items-center gap-4">
+    <img class="size-12 rounded-full border border-line object-cover" src={image} alt="" width="48" height="48" loading="lazy" />
+    <span class="text-sm"><strong class="block font-semibold text-ink">{name}</strong><span class="mt-1 block text-muted">{role}</span></span>
+  </figcaption>
+</figure>

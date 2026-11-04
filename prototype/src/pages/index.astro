@@ -1,0 +1,231 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CapabilityScene from '../components/CapabilityScene.astro';
+import Header from '../components/Header.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import {
+  ArrowUp,
+  ArrowUpRight,
+  CalendarDays,
+  ExternalLink,
+  Mail,
+} from '@lucide/astro';
+
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+
+const capabilities = [
+  {
+    number: '01',
+    kind: 'design',
+    title: 'Product Design',
+    description: 'UX/UI design, responsive interfaces, design systems, prototyping, and frontend implementation.',
+    tools: 'Figma · Design Systems · Prototyping · Accessibility',
+  },
+  {
+    number: '02',
+    kind: 'dev',
+    title: 'Product Development',
+    description: 'Frontend development, application codebases, API integrations, authentication, and backend services.',
+    tools: 'JavaScript · TypeScript · React · Vue · Supabase · REST APIs',
+  },
+  {
+    number: '03',
+    kind: 'ai',
+    title: 'AI & Automation',
+    description: 'AI-assisted software development, workflow automation, AI integrations, and agent-related workflows.',
+    tools: 'Claude Code · Codex · n8n · OpenAI API · Webhooks',
+  },
+];
+
+const experience = [
+  ['2024–2025', 'Design Engineer, Product Designer & Full-Stack Developer', 'Alaska Tech'],
+  ['2023–2024', 'UX/UI Front-End Developer', 'Sell2Rent'],
+  ['2022–2023', 'Senior UX/UI Designer', 'Indeed.com'],
+  ['2021–2022', 'Designer Front-End Developer', 'BingeWave'],
+  ['2018–2021', 'Senior Graphic Web Designer', 'Web4Realty'],
+  ['2015–2017', 'Web Designer', 'ZNetworks Group'],
+  ['2014–2015', 'Digital Graphic Designer', 'eSmart Digital'],
+];
+
+const testimonials = [
+  {
+    quote: 'Working with Rafael was an absolute pleasure. He contributed positively to both our culture and performance. I highly recommend him to any organization seeking a reliable, talented, and trustworthy team member who brings real value.',
+    name: 'Kosta Panagoulias', role: 'President, Web4Realty', image: `${base}img/user-kosta.jpg`, featured: true,
+  },
+  {
+    quote: 'Rafael is incredibly creative, self-driven, and detail-oriented. I had the chance to collaborate with him on several projects, and his UX and product thinking stood out. I highly recommend him for any web or front-end project.',
+    name: 'Luis Felipe Roman', role: 'Senior Frontend Developer | React', image: `${base}img/user-lfroman.jpg`,
+  },
+  {
+    quote: 'Rafael communicates clearly with developers, adapts quickly, and consistently delivers improvements in both visuals and performance. His ability to translate vision into action made him a valuable asset to our product team.',
+    name: 'Devin Dixon', role: 'Founder & CEO at BingeWave', image: `${base}img/user-devin.jpg`,
+  },
+  {
+    quote: 'Rafa blends creativity with technical know-how effortlessly. His work ethic, focus on details, and consistent delivery impressed everyone. He brings unique perspectives that elevate projects beyond expectations and always exceeds standards.',
+    name: 'Alex Arguelles', role: 'Co-Founder & CEO at Sell2Rent', image: `${base}img/user-alex.png`,
+  },
+  {
+    quote: 'Rafa is a reliable, talented professional who consistently delivers outstanding results. His collaborative spirit and ability to understand complex needs made every project smoother, faster, and more successful. A true asset to any team.',
+    name: 'Sandro Alarcón', role: 'CEO at TravelKit', image: `${base}img/user-sandro.png`,
+  },
+];
+
+const projects = [
+  ['TravelKit', 'Product Designer UI/UX · Front-End Developer', 'DEMO-travelkit.png', 'https://web.travelkit.us/'],
+  ['Heraldos del Evangelio', 'Designer · Developer · Marketing Strategist', 'DEMO-heraldos.png', 'https://heraldosmexico.org/'],
+  ['Sell2Rent', 'UI/UX · Front-End Developer', 'DEMO-sell2rent.png', 'https://sell2rent.com/'],
+  ['Dispatched Business Studio', 'Designer · Developer', 'DEMO-dispatched.png', 'https://www.dispatchedstudio.com/'],
+  ['OH foodie!', 'Product Designer · Developer', 'DEMO-ohfoodie.png', 'https://ohfoodie.com/'],
+  ['BingeWave', 'Designer · Developer · Marketing Strategist', 'DEMO-bingewave.png', 'https://www.bingewave.com/'],
+  ['StoneDeals', 'UI/UX Designer', 'DEMO-stonedeals.png', 'http://www.stonedeal.com/'],
+  ['Elliott Wave Forecast', 'UI/UX Designer', 'DEMO-elliotwave.png', 'https://elliottwave-forecast.com/'],
+  ['eSmart Digital', 'Web Designer · Developer', 'DEMO-esmart.png', 'http://esmartdigital.com/'],
+  ['Aaron Kirman Real Estate', 'UI/UX Designer', 'DEMO-aaronkirman.png', 'https://aaronkirman.com/'],
+  ['George Karanopoulos Broker', 'UI/UX Designer', 'DEMO-georgeK.png', 'https://torontoisgood.com/'],
+  ['Chispitas Mariposas', 'WordPress Developer', 'DEMO-mariposa.png', 'http://mariposa.com.co/'],
+];
+---
+
+<BaseLayout title="Rafael Castillo — AI Product Engineer" description="Portfolio of Rafael Castillo, an AI Product Engineer working across product design, full-stack development, AI, and automation.">
+  <Header />
+
+  <main id="main-content">
+    <section id="top" class="relative isolate flex items-center overflow-hidden px-5 pt-28 pb-16 sm:px-8 sm:pb-20 md:min-h-svh md:pt-[calc(var(--header-height)+1.5rem)] md:pb-10" data-hero>
+      <img class="absolute inset-0 -z-20 h-full w-full object-cover object-[50%_40%]" src={`${base}img/hero-clouds.jpg`} alt="" width="1672" height="941" fetchpriority="high" decoding="async" aria-hidden="true" />
+      <div class="absolute inset-0 -z-20 bg-[linear-gradient(to_bottom,rgba(0,2,15,0.15),rgba(0,2,15,0.3)_50%,#00020f)]" aria-hidden="true"></div>
+      <div class="absolute top-24 left-1/2 -z-10 h-80 w-80 -translate-x-1/2 rounded-full bg-accent/10 blur-[100px]" data-parallax aria-hidden="true"></div>
+      <div class="mx-auto w-full max-w-4xl text-center">
+        <div class="relative mx-auto mb-6 w-fit" data-hero-item>
+          <div class="absolute -inset-2 rounded-full bg-gradient-to-br from-accent/60 to-violet/60 blur-md"></div>
+          <img class="relative size-28 rounded-full border-2 border-white/20 object-cover shadow-2xl sm:size-32" src={`${base}img/profile-2026.png`} alt="Rafael Castillo" width="128" height="128" />
+          <span class="absolute right-1 bottom-2 size-5 rounded-full border-4 border-night bg-accent" aria-hidden="true"></span>
+        </div>
+        <p class="mb-4 text-sm font-semibold tracking-[0.18em] text-accent uppercase" data-hero-item>Rafael Castillo</p>
+        <h1 class="hero-title font-display leading-[0.96] font-semibold tracking-[-0.06em] text-balance" data-hero-item>AI Product Engineer</h1>
+        <p class="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted sm:text-xl" data-hero-item>Product Design · Full-Stack Development · AI &amp; Automation</p>
+        <a class="interactive-link mt-9 inline-flex min-h-12 items-center gap-3 rounded-full bg-accent px-7 py-3.5 font-bold text-night shadow-[0_12px_30px_rgba(124,242,158,0.18)] hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(124,242,158,0.24)]" href="#contact" data-hero-item>Contact me <ArrowUpRight size={18} strokeWidth={2} aria-hidden="true" /></a>
+        <div class="mx-auto mt-10 w-full max-w-md" data-hero-item>
+          <div class="flare relative flex items-center gap-4 rounded-2xl border border-white/10 bg-panel/75 p-4 text-left shadow-[var(--shadow-card)] backdrop-blur-md sm:p-5">
+            <img class="size-11 shrink-0 object-contain" src={`${base}img/xms-logo.png`} alt="" width="44" height="44" />
+            <div class="min-w-0 flex-1">
+              <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-[0.7rem] font-semibold tracking-[0.16em] whitespace-nowrap uppercase">
+                <p class="flex items-center gap-2 text-accent"><span class="size-2 rounded-full bg-accent shadow-[0_0_0_4px_rgba(0,255,151,0.14)]" aria-hidden="true"></span>Current position</p>
+                <p class="text-muted">2025–Present</p>
+              </div>
+              <p class="mt-2 text-sm leading-5 text-muted">Currently at <span class="font-semibold text-ink">Xperience Marketing Solutions</span></p>
+              <p class="mt-0.5 font-display text-base font-semibold tracking-[-0.02em] text-ink">AI Web Design Manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section-shell section-divider bg-panel/45 px-5 sm:px-8">
+      <div class="mx-auto max-w-7xl">
+        <SectionHeading eyebrow="What I Do" title="Product thinking from interface design through implementation." lead="Experience with design, application development, integrations, deployment, and workflow automation." />
+        <div class="capabilities grid gap-5 lg:grid-cols-3 lg:gap-0 lg:overflow-hidden lg:rounded-[1.75rem] lg:border lg:border-line lg:bg-panel lg:shadow-[var(--shadow-card)]" data-stagger>
+          {capabilities.map(({ kind, ...item }) => (
+            <article class="surface-card rounded-[1.75rem] border border-line bg-panel p-5 hover:border-accent/55 sm:p-8 lg:rounded-none lg:border-0 lg:border-l lg:bg-transparent lg:first:border-l-0">
+              <CapabilityScene kind={kind as 'design' | 'dev' | 'ai'} />
+              <p class="mt-8 mb-3 text-xs font-bold tracking-[0.18em] text-muted">{item.number}</p>
+              <h3 class="font-display text-2xl font-semibold tracking-[-0.035em]">{item.title}</h3>
+              <p class="mt-4 leading-7 text-muted">{item.description}</p>
+              <p class="mt-8 border-t border-line pt-5 text-sm leading-6 text-accent/80">{item.tools}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section-shell section-divider px-5 sm:px-8">
+      <div class="mx-auto max-w-7xl">
+        <SectionHeading eyebrow="Why Hire Me" title="Experience across product design and development." lead="I have worked remotely with product teams and companies across different industries, connecting design decisions with implementation." />
+        <div class="grid gap-14 lg:grid-cols-[0.72fr_1.28fr]">
+          <div class="surface-card rounded-[2rem] border border-line bg-gradient-to-br from-panel-soft to-panel p-7 sm:p-8 lg:sticky lg:top-28 lg:h-fit" data-reveal>
+            <p class="font-display text-2xl leading-tight font-semibold tracking-[-0.04em]">Current role</p>
+            <p class="mt-6 text-lg text-ink">AI Web Design Manager</p>
+            <p class="mt-1 text-muted">Xperience Marketing Solutions (XMS)</p>
+            <p class="mt-1 text-sm text-muted">2025–Present</p>
+            <div class="mt-10 border-t border-line pt-6 text-sm leading-7 text-muted">Product design · Frontend development · Integrations · Deployment · Automation</div>
+          </div>
+          <div class="border-t border-line" data-stagger>
+            {experience.map(([date, role, company]) => (
+              <article class="grid gap-3 border-b border-line py-6 sm:grid-cols-[130px_1fr] sm:gap-8">
+                <p class="text-sm text-muted">{date}</p>
+                <div><h3 class="font-display text-lg font-semibold tracking-[-0.025em] sm:text-xl">{role}</h3><p class="mt-1 text-sm text-muted">{company}</p></div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div class="mt-28">
+          <SectionHeading eyebrow="Testimonials" title="Feedback from people I have worked with." />
+          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-stagger>
+            {testimonials.map((item) => <TestimonialCard {...item} />)}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section-shell section-divider bg-panel/45 px-5 sm:px-8">
+      <div class="mx-auto max-w-7xl">
+        <SectionHeading eyebrow="Featured Work" title="Selected product, development, and design work." />
+        <div class="grid gap-6 md:grid-cols-2" data-stagger>
+          <ProjectCard name="Dress in Person" role="Mobile-first browser dress-up game" image="https://dress-in-person.vercel.app/assets/ui/home-logo.png" href="https://dress-in-person.vercel.app/" featured imageClass="bg-[#eab6cf] object-contain p-10 sm:p-16" />
+          <ProjectCard name="Draft Animal Arena" role="Responsive 3v3 browser auto-battler" image="https://draft-animal-arena.vercel.app/assets/home/home-heroes.png" href="https://draft-animal-arena.vercel.app/" repository="https://github.com/rafatoski/draft-animal-arena" featured imageClass="bg-[#3c2866] object-contain p-6 sm:p-10" />
+        </div>
+
+        <div class="mt-20 flex flex-col gap-4 border-t border-line pt-10 sm:mt-24 sm:flex-row sm:items-end sm:justify-between" data-reveal>
+          <div><p class="text-xs font-bold tracking-[0.22em] text-accent uppercase">Project Archive</p><h3 class="mt-3 font-display text-3xl font-semibold tracking-[-0.04em]">Previous work</h3></div>
+          <p class="max-w-md text-sm leading-6 text-muted">Projects from the original portfolio across product design, frontend development, WordPress, and digital design.</p>
+        </div>
+        <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
+          {projects.map(([name, role, image, href]) => <ProjectCard name={name} role={role} image={`${base}img/${image}`} href={href} />)}
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-shell section-divider px-5 sm:px-8">
+      <div class="mx-auto grid max-w-6xl items-start gap-12 lg:grid-cols-[280px_1fr] lg:gap-20">
+        <div class="surface-card overflow-hidden rounded-[2rem] border border-line bg-panel" data-reveal>
+          <img class="aspect-square w-full object-cover" src={`${base}img/profile-2026.png`} alt="Portrait of Rafael Castillo" width="360" height="360" loading="lazy" decoding="async" data-about-image />
+        </div>
+        <div data-reveal>
+          <p class="mb-4 text-xs font-bold tracking-[0.22em] text-accent uppercase">About Me</p>
+          <h2 class="section-title font-display leading-tight font-semibold tracking-[-0.04em]">My background connects product design with implementation.</h2>
+          <div class="mt-8 max-w-3xl space-y-5 text-base leading-8 text-muted sm:text-lg">
+            <p>I started in motion graphics and visual design, then moved into UX/UI and frontend development. I have worked remotely with startups and product teams across different industries.</p>
+            <p>My current work includes backend integrations, APIs, authentication, databases, deployment workflows, AI-assisted development, and automation. Product design remains part of how I plan and build software.</p>
+          </div>
+          <div class="mt-10 grid gap-4 border-t border-line pt-8 sm:grid-cols-3">
+            <p class="text-sm"><strong class="block text-ink">Full-Stack Development</strong><span class="mt-2 block text-muted">Enyoi Online School</span></p>
+            <p class="text-sm"><strong class="block text-ink">Audiovisual &amp; Multimedia Production</strong><span class="mt-2 block text-muted">Jorge Tadeo Lozano University</span></p>
+            <p class="text-sm"><strong class="block text-ink">Multimedia Production</strong><span class="mt-2 block text-muted">SENA Colombia</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="px-5 pb-8 pt-6 sm:px-8 sm:pb-10">
+      <div class="mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-accent/30 bg-accent px-6 py-14 text-night shadow-[0_30px_100px_rgba(124,242,158,0.12)] sm:px-12 sm:py-16 lg:px-16 lg:py-20" data-reveal>
+        <div class="grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
+          <div><p class="text-xs font-bold tracking-[0.22em] uppercase">Contact</p><h2 class="mt-5 max-w-3xl font-display text-4xl leading-[1.02] font-semibold tracking-[-0.05em] sm:text-5xl lg:text-6xl">Professional opportunities and collaboration.</h2></div>
+          <a class="interactive-link inline-flex min-h-12 w-fit items-center gap-3 rounded-full bg-night px-7 py-3.5 font-bold text-ink shadow-lg hover:-translate-y-0.5" href="https://calendly.com/rafaelcastilloac89/30min" target="_blank" rel="noopener noreferrer">Schedule a meeting <CalendarDays size={18} strokeWidth={2} aria-hidden="true" /></a>
+        </div>
+        <div class="mt-12 flex flex-col gap-2 border-t border-night/20 pt-6 text-sm font-semibold sm:mt-14 sm:flex-row sm:flex-wrap sm:gap-x-4 sm:gap-y-3 sm:pt-7">
+          <a class="interactive-link inline-flex min-h-11 items-center gap-2 rounded-full px-3 hover:bg-night/8" href="https://www.linkedin.com/in/rafaelcastillocreative/" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>LinkedIn <ExternalLink size={14} aria-hidden="true" /></a>
+          <a class="interactive-link inline-flex min-h-11 items-center gap-2 rounded-full px-3 hover:bg-night/8" href="https://github.com/rafatoski" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" /><path d="M9 18c-4.51 2-5-2-7-2" /></svg>GitHub <ExternalLink size={14} aria-hidden="true" /></a>
+          <a class="interactive-link inline-flex min-h-11 items-center gap-2 rounded-full px-3 hover:bg-night/8" href="mailto:rafaelcastilloac89@gmail.com"><Mail size={17} strokeWidth={2} aria-hidden="true" /><span class="break-all">rafaelcastilloac89@gmail.com</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:px-8">
+    <p>© 2026 Rafael Castillo</p><a class="interactive-link inline-flex min-h-11 items-center gap-2 hover:text-accent" href="#top">Back to top <ArrowUp size={16} aria-hidden="true" /></a>
+  </footer>
+
+  <script src="../scripts/site.ts"></script>
+</BaseLayout>

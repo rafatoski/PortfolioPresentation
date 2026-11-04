@@ -1,0 +1,71 @@
+---
+import { ArrowUpRight, BadgeCheck, CalendarDays, FolderKanban, Home, Layers3, Menu, UserRound, X } from '@lucide/astro';
+
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+
+const links = [
+  ['#top', 'Home'],
+  ['#services', 'What I Do'],
+  ['#experience', 'Experience'],
+  ['#work', 'Work'],
+  ['#about', 'About'],
+];
+
+const linkClass = 'interactive-link flex min-h-11 items-center gap-2 rounded-full px-3 text-sm text-muted hover:bg-white/5 hover:text-accent';
+---
+
+<header class="site-header fixed inset-x-0 top-0 z-40 border-b border-transparent" data-site-header>
+  <nav class="relative mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:h-20 sm:px-8" aria-label="Primary navigation">
+    <div class="hidden items-center gap-1 md:flex">
+      <a class={linkClass} href="#top"><Home size={16} stroke-width={1.8} aria-hidden="true" />Home</a>
+      <a class={linkClass} href="#services"><Layers3 size={16} stroke-width={1.8} aria-hidden="true" />What I Do</a>
+      <a class={linkClass} href="#experience"><BadgeCheck size={16} stroke-width={1.8} aria-hidden="true" />Experience</a>
+    </div>
+
+    <a class="interactive-link grid size-12 place-items-center rounded-full hover:bg-white/5 md:absolute md:left-1/2 md:-translate-x-1/2" href="#top" aria-label="Rafael Castillo, home">
+      <img class="h-8 w-9 object-contain" src={`${base}img/logo.png`} alt="" width="36" height="32" />
+    </a>
+
+    <div class="hidden items-center gap-1 md:flex">
+      <a class={linkClass} href="#work"><FolderKanban size={16} stroke-width={1.8} aria-hidden="true" />Work</a>
+      <a class={linkClass} href="#about"><UserRound size={16} stroke-width={1.8} aria-hidden="true" />About</a>
+      <a class="interactive-link ml-2 flex min-h-11 items-center gap-2 rounded-full border border-line px-5 font-semibold text-ink hover:border-accent hover:bg-accent hover:text-night" href="#contact"><CalendarDays size={17} stroke-width={1.8} aria-hidden="true" />Contact</a>
+    </div>
+
+    <button class="interactive-link flex min-h-11 items-center gap-2 rounded-full border border-line px-4 text-sm font-semibold md:hidden" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobile-menu" data-menu-open>
+      <Menu size={18} stroke-width={1.8} aria-hidden="true" />
+      <span>Menu</span>
+    </button>
+  </nav>
+
+  <dialog id="mobile-menu" class="mobile-menu md:hidden" aria-label="Navigation menu" data-mobile-menu>
+    <div class="flex h-full flex-col px-5 pb-[max(2rem,env(safe-area-inset-bottom))]">
+      <div class="flex h-18 shrink-0 items-center justify-between" data-menu-item>
+        <img class="h-8 w-9 object-contain" src={`${base}img/logo.png`} alt="" width="36" height="32" />
+        <button class="interactive-link flex min-h-11 items-center gap-2 rounded-full border border-line px-4 text-sm font-semibold hover:border-accent hover:text-accent" type="button" aria-label="Close navigation menu" autofocus data-menu-close>
+          <X size={18} stroke-width={1.8} aria-hidden="true" />
+          <span aria-hidden="true">Close</span>
+        </button>
+      </div>
+
+      <nav class="my-auto py-8" aria-label="Mobile navigation">
+        <ul class="border-t border-line">
+          {links.map(([href, label], index) => (
+            <li class="border-b border-line" data-menu-item>
+              <a class="interactive-link group flex min-h-18 items-center gap-5 py-3 hover:text-accent" href={href}>
+                <span class="w-6 text-xs font-bold tracking-[0.18em] text-muted">{String(index + 1).padStart(2, '0')}</span>
+                <span class="font-display text-[clamp(2rem,9vw,2.75rem)] leading-none font-semibold tracking-[-0.045em]">{label}</span>
+                <ArrowUpRight class="ml-auto text-muted group-hover:text-accent" size={22} stroke-width={1.8} aria-hidden="true" />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <div class="shrink-0" data-menu-item>
+        <a class="interactive-link flex min-h-14 items-center justify-center gap-3 rounded-full bg-accent px-6 font-bold text-night" href="#contact"><CalendarDays size={18} stroke-width={1.8} aria-hidden="true" />Contact me</a>
+        <p class="mt-5 text-center text-xs tracking-[0.18em] text-muted uppercase">Rafael Castillo · AI Product Engineer</p>
+      </div>
+    </div>
+  </dialog>
+</header>
