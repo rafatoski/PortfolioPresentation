@@ -19,7 +19,14 @@ I combine AI engineering, full-stack development, and product design to turn com
 
 ## This portfolio
 
-A curated selection of my work across AI, product design, automation, and web development. The site is built with semantic HTML, CSS, JavaScript, and Bootstrap, with responsive layouts, motion, and light/dark themes.
+A curated selection of my work across AI, product design, automation, and web development. The site is built with Astro, Tailwind CSS, and GSAP, and is deployed to GitHub Pages as a static site through GitHub Actions on every push to `master`.
+
+```sh
+npm install
+npm run dev      # local development
+npm run build    # static output in dist/
+npm run preview  # serve the build at /PortfolioPresentation/
+```
 
 ## Background
 
