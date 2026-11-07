@@ -106,8 +106,14 @@ const projects = [
         <h1 class="hero-title font-display leading-[0.96] font-semibold tracking-[-0.06em] text-balance" data-hero-item>AI Product Engineer</h1>
         <p class="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted sm:text-xl" data-hero-item>Product Design · Full-Stack Development · AI &amp; Automation</p>
         <a class="interactive-link mt-9 inline-flex min-h-12 items-center gap-3 rounded-full bg-accent px-7 py-3.5 font-bold text-night shadow-[0_12px_30px_rgba(124,242,158,0.18)] hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(124,242,158,0.24)]" href="#contact" data-hero-item>Contact me <ArrowUpRight size={18} strokeWidth={2} aria-hidden="true" /></a>
-        <div class="mx-auto mt-10 w-full max-w-md" data-hero-item>
-          <div class="flare relative flex items-center gap-4 rounded-2xl border border-white/10 bg-panel/75 p-4 text-left shadow-[var(--shadow-card)] backdrop-blur-md sm:p-5">
+        <div class="current-role-stack mx-auto mt-10 w-full max-w-md" data-hero-item>
+          <div class="current-role-stack__layers" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="glass-surface flare relative flex items-center gap-4 rounded-2xl border p-4 text-left shadow-[var(--shadow-card)] sm:p-5">
             <img class="size-11 shrink-0 object-contain" src={`${base}img/xms-logo.png`} alt="" width="44" height="44" />
             <div class="min-w-0 flex-1">
               <div class="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 text-[0.7rem] font-semibold tracking-[0.16em] whitespace-nowrap uppercase">
@@ -115,7 +121,7 @@ const projects = [
                 <p class="text-muted">2025–Present</p>
               </div>
               <p class="mt-2 text-sm leading-5 text-muted">Currently at <span class="font-semibold text-ink">Xperience Marketing Solutions</span></p>
-              <p class="mt-0.5 font-display text-base font-semibold tracking-[-0.02em] text-ink">AI Engineer</p>
+              <p class="mt-0.5 font-display text-base font-semibold tracking-[-0.02em] text-ink">AI Product Engineer</p>
             </div>
           </div>
         </div>
@@ -127,7 +133,7 @@ const projects = [
         <SectionHeading eyebrow="What I Do" title="Product thinking from interface design through implementation." lead="Experience with design, application development, integrations, deployment, and workflow automation." />
         <div class="capabilities grid gap-5 lg:grid-cols-3 lg:gap-0 lg:overflow-hidden lg:rounded-[1.75rem] lg:border lg:border-line lg:bg-panel lg:shadow-[var(--shadow-card)]" data-stagger>
           {capabilities.map(({ kind, ...item }) => (
-            <article class="surface-card rounded-[1.75rem] border border-line bg-panel p-5 hover:border-accent/55 sm:p-8 lg:rounded-none lg:border-0 lg:border-l lg:bg-transparent lg:first:border-l-0">
+            <article class="glass-surface surface-card rounded-[1.75rem] border p-5 hover:border-accent/55 sm:p-8 lg:rounded-none lg:border-0 lg:border-l lg:first:border-l-0">
               <CapabilityScene kind={kind as 'design' | 'dev' | 'ai'} />
               <p class="mt-8 mb-3 text-xs font-bold tracking-[0.18em] text-muted">{item.number}</p>
               <h3 class="font-display text-2xl font-semibold tracking-[-0.035em]">{item.title}</h3>
@@ -143,9 +149,9 @@ const projects = [
       <div class="mx-auto max-w-7xl">
         <SectionHeading eyebrow="Why Hire Me" title="Experience across product design and development." lead="I have worked remotely with product teams and companies across different industries, connecting design decisions with implementation." />
         <div class="grid gap-14 lg:grid-cols-[0.72fr_1.28fr]">
-          <div class="surface-card rounded-[2rem] border border-line bg-gradient-to-br from-panel-soft to-panel p-7 sm:p-8 lg:sticky lg:top-28 lg:h-fit" data-reveal>
+          <div class="glass-surface surface-card rounded-[2rem] border p-7 sm:p-8 lg:sticky lg:top-28 lg:h-fit" data-reveal>
             <p class="font-display text-2xl leading-tight font-semibold tracking-[-0.04em]">Current role</p>
-            <p class="mt-6 text-lg text-ink">AI Engineer</p>
+            <p class="mt-6 text-lg text-ink">AI Product Engineer</p>
             <p class="mt-1 text-muted">Xperience Marketing Solutions (XMS)</p>
             <p class="mt-1 text-sm text-muted">2025–Present</p>
             <div class="mt-10 border-t border-line pt-6 text-sm leading-7 text-muted">Product design · AI engineering · Full-stack development · Integrations · Deployment · Automation</div>

@@ -20,6 +20,9 @@
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --shadow-card: 0 24px 70px rgba(0, 2, 15, 0.28);
   --shadow-card-hover: 0 28px 80px rgba(0, 2, 15, 0.42);
+  --glass-background: rgba(17, 20, 33, 0.58);
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-blur: 18px;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -102,6 +105,114 @@ button {
     box-shadow 300ms var(--ease-out),
     transform 300ms var(--ease-out),
     background-color 240ms var(--ease-out);
+}
+
+/* Web adaptation of a native BlurView: translucent tint, backdrop blur and a light grain. */
+.glass-surface {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-color: var(--glass-border);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.075), transparent 42%, rgba(0, 255, 151, 0.035)),
+    var(--glass-background);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(145%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(145%);
+}
+
+.glass-surface::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(255, 255, 255, 0.1) 0 0.5px, transparent 0.75px),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.055), transparent 28%);
+  background-size: 5px 5px, 100% 100%;
+  content: "";
+  opacity: 0.24;
+  pointer-events: none;
+}
+
+.glass-surface > * {
+  position: relative;
+  z-index: 2;
+}
+
+.current-role-stack {
+  position: relative;
+  isolation: isolate;
+  padding-bottom: 1.25rem;
+  perspective: 900px;
+}
+
+.current-role-stack > .glass-surface {
+  z-index: 5;
+}
+
+.current-role-stack__layers {
+  position: absolute;
+  inset: 0 0 1.25rem;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.current-role-stack__layers span {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.075), rgba(17, 20, 33, 0.72));
+  box-shadow: 0 18px 50px rgba(0, 2, 15, 0.24);
+  transform-origin: 50% 0;
+  transition: transform 420ms var(--ease-out), opacity 300ms ease;
+}
+
+.current-role-stack__layers span:nth-child(1) {
+  opacity: 0.28;
+  transform: translate3d(0, 20px, -40px) scaleX(0.88);
+}
+
+.current-role-stack__layers span:nth-child(2) {
+  opacity: 0.4;
+  transform: translate3d(-5px, 14px, -30px) rotate(-0.8deg) scaleX(0.92);
+}
+
+.current-role-stack__layers span:nth-child(3) {
+  opacity: 0.52;
+  transform: translate3d(5px, 9px, -20px) rotate(0.65deg) scaleX(0.95);
+}
+
+.current-role-stack__layers span:nth-child(4) {
+  opacity: 0.68;
+  transform: translate3d(0, 5px, -10px) scaleX(0.98);
+}
+
+@media (hover: hover) {
+  .current-role-stack:hover .current-role-stack__layers span:nth-child(1) {
+    transform: translate3d(-10px, 24px, -40px) rotate(-2deg) scaleX(0.88);
+  }
+
+  .current-role-stack:hover .current-role-stack__layers span:nth-child(2) {
+    transform: translate3d(10px, 17px, -30px) rotate(1.5deg) scaleX(0.92);
+  }
+
+  .current-role-stack:hover .current-role-stack__layers span:nth-child(3) {
+    transform: translate3d(-6px, 11px, -20px) rotate(-0.8deg) scaleX(0.95);
+  }
+}
+
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .glass-surface {
+    background: var(--color-panel);
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass-surface {
+    background: var(--color-panel);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
 }
 
 /* Subtle anamorphic lens flare: hotspot, horizontal streak, halo and a mirrored ghost. */
