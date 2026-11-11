@@ -40,7 +40,7 @@ const capabilities = [
 ];
 
 const experience = [
-  ['2024–2025', 'Design Engineer, Product Designer & Full-Stack Developer', 'Alaska Tech'],
+  ['2024–2025', 'Design & Engineering Manager, Product Designer & Full-Stack Developer', 'Alaska Tech', 'Led cross-functional design and engineering teams, coordinating product strategy and delivery.'],
   ['2023–2024', 'UX/UI Front-End Developer', 'Sell2Rent'],
   ['2022–2023', 'Senior UX/UI Designer', 'Indeed.com'],
   ['2021–2022', 'Designer Front-End Developer', 'BingeWave'],
@@ -121,7 +121,7 @@ const projects = [
                 <p class="text-muted">2025–Present</p>
               </div>
               <p class="mt-2 text-sm leading-5 text-muted">Currently at <span class="font-semibold text-ink">Xperience Marketing Solutions</span></p>
-              <p class="mt-0.5 font-display text-base font-semibold tracking-[-0.02em] text-ink">AI Product Engineer</p>
+              <p class="mt-0.5 font-display text-base font-semibold tracking-[-0.02em] text-ink">AI Engineering Manager</p>
             </div>
           </div>
         </div>
@@ -151,16 +151,21 @@ const projects = [
         <div class="grid gap-14 lg:grid-cols-[0.72fr_1.28fr]">
           <div class="glass-surface surface-card rounded-[2rem] border p-7 sm:p-8 lg:sticky lg:top-28 lg:h-fit" data-reveal>
             <p class="font-display text-2xl leading-tight font-semibold tracking-[-0.04em]">Current role</p>
-            <p class="mt-6 text-lg text-ink">AI Product Engineer</p>
+            <p class="mt-6 text-lg text-ink">AI Engineering Manager</p>
             <p class="mt-1 text-muted">Xperience Marketing Solutions (XMS)</p>
             <p class="mt-1 text-sm text-muted">2025–Present</p>
-            <div class="mt-10 border-t border-line pt-6 text-sm leading-7 text-muted">Product design · AI engineering · Full-stack development · Integrations · Deployment · Automation</div>
+            <p class="mt-5 text-sm leading-6 text-muted">Manage and lead the AI engineering team, guiding technical strategy, collaboration, and product delivery.</p>
+            <div class="mt-8 border-t border-line pt-6 text-sm leading-7 text-muted">Team leadership · AI engineering · Product design · Full-stack development · Integrations · Deployment · Automation</div>
           </div>
           <div class="border-t border-line" data-stagger>
-            {experience.map(([date, role, company]) => (
+            {experience.map(([date, role, company, description]) => (
               <article class="grid gap-3 border-b border-line py-6 sm:grid-cols-[130px_1fr] sm:gap-8">
                 <p class="text-sm text-muted">{date}</p>
-                <div><h3 class="font-display text-lg font-semibold tracking-[-0.025em] sm:text-xl">{role}</h3><p class="mt-1 text-sm text-muted">{company}</p></div>
+                <div>
+                  <h3 class="font-display text-lg font-semibold tracking-[-0.025em] sm:text-xl">{role}</h3>
+                  <p class="mt-1 text-sm text-muted">{company}</p>
+                  {description && <p class="mt-3 max-w-2xl text-sm leading-6 text-muted">{description}</p>}
+                </div>
               </article>
             ))}
           </div>
