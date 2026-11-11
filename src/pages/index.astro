@@ -9,6 +9,7 @@ import {
   ArrowUp,
   ArrowUpRight,
   CalendarDays,
+  Download,
   ExternalLink,
   Mail,
 } from '@lucide/astro';
@@ -105,7 +106,10 @@ const projects = [
         <p class="mb-4 text-sm font-semibold tracking-[0.18em] text-accent uppercase" data-hero-item>Rafael Castillo</p>
         <h1 class="hero-title font-display leading-[0.96] font-semibold tracking-[-0.06em] text-balance" data-hero-item>AI Product Engineer</h1>
         <p class="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted sm:text-xl" data-hero-item>Product Design · Full-Stack Development · AI &amp; Automation</p>
-        <a class="interactive-link mt-9 inline-flex min-h-12 items-center gap-3 rounded-full bg-accent px-7 py-3.5 font-bold text-night shadow-[0_12px_30px_rgba(124,242,158,0.18)] hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(124,242,158,0.24)]" href="#contact" data-hero-item>Contact me <ArrowUpRight size={18} strokeWidth={2} aria-hidden="true" /></a>
+        <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row" data-hero-item>
+          <a class="interactive-link inline-flex min-h-12 items-center gap-3 rounded-full bg-accent px-7 py-3.5 font-bold text-night shadow-[0_12px_30px_rgba(124,242,158,0.18)] hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(124,242,158,0.24)]" href="#contact">Contact me <ArrowUpRight size={18} strokeWidth={2} aria-hidden="true" /></a>
+          <a class="interactive-link inline-flex min-h-12 items-center gap-3 rounded-full border border-white/20 bg-night/45 px-7 py-3.5 font-bold text-ink shadow-lg backdrop-blur-md hover:-translate-y-0.5 hover:border-accent/60 hover:bg-panel/80" href={`${base}Rafael-Castillo-CV.pdf`} download="Rafael-Castillo-CV.pdf">Download CV <Download size={18} strokeWidth={2} aria-hidden="true" /></a>
+        </div>
         <div class="current-role-stack mx-auto mt-10 w-full max-w-md" data-hero-item>
           <div class="current-role-stack__layers" aria-hidden="true">
             <span></span>
