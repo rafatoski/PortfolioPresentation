@@ -108,7 +108,10 @@ const projects = [
         <p class="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted sm:text-xl" data-hero-item>Product Design · Full-Stack Development · AI &amp; Automation</p>
         <div class="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row" data-hero-item>
           <a class="interactive-link inline-flex min-h-12 items-center gap-3 rounded-full bg-accent px-7 py-3.5 font-bold text-night shadow-[0_12px_30px_rgba(124,242,158,0.18)] hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgba(124,242,158,0.24)]" href="#contact">Contact me <ArrowUpRight size={18} strokeWidth={2} aria-hidden="true" /></a>
-          <a class="interactive-link inline-flex min-h-12 items-center gap-3 rounded-full border border-white/20 bg-night/45 px-7 py-3.5 font-bold text-ink shadow-lg backdrop-blur-md hover:-translate-y-0.5 hover:border-accent/60 hover:bg-panel/80" href={`${base}Rafael-Castillo-CV.pdf`} download="Rafael-Castillo-CV.pdf">Download CV <Download size={18} strokeWidth={2} aria-hidden="true" /></a>
+          <span class="group relative inline-flex">
+            <a class="interactive-link inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-full px-3 text-sm font-semibold tracking-[0.04em] text-muted hover:bg-white/6 hover:text-ink" href={`${base}Rafael-Castillo-CV.pdf`} download="Rafael-Castillo-CV.pdf" aria-label="Download CV" aria-describedby="download-cv-tooltip"><Download size={18} strokeWidth={1.8} aria-hidden="true" />CV</a>
+            <span id="download-cv-tooltip" role="tooltip" class="pointer-events-none absolute top-full left-1/2 z-20 mt-2 -translate-x-1/2 rounded-md border border-white/10 bg-panel px-2.5 py-1.5 text-xs font-medium whitespace-nowrap text-ink opacity-0 shadow-lg transition-opacity duration-150 group-hover:opacity-100 group-focus-within:opacity-100">Download CV</span>
+          </span>
         </div>
         <div class="current-role-stack mx-auto mt-10 w-full max-w-md" data-hero-item>
           <div class="current-role-stack__layers" aria-hidden="true">
